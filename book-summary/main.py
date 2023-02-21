@@ -133,8 +133,8 @@ def new_book(server_request: cob.Request) -> cob.Page:
     
     return page
     
-# APP CONFIGURATION: Do not delete this comment. 
-# Temporary Restriction: Do not edit the code below this comment.
+# APP CONFIGURATION
+
 app = cob.App("Book Summary", use_built_in_auth=False)
 
 app.add_page('/book', 'book', book, show_in_navbar=True, footer_category=None)

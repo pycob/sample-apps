@@ -113,8 +113,8 @@ def add_entry(server_request: cob.Request) -> cob.Page:
 
     return page
 
-# APP CONFIGURATION: Do not delete this comment. 
-# Temporary Restriction: Do not edit the code below this comment.
+# APP CONFIGURATION
+
 app = cob.App("Survey Template", use_built_in_auth=True)
 
 app.register_function(home, show_in_navbar=False)

@@ -32,8 +32,8 @@ def table_detail(server_request: cob.Request) -> cob.Page:
     
     return page
     
-# APP CONFIGURATION: Do not delete this comment. 
-# Temporary Restriction: Do not edit the code below this comment.
+# APP CONFIGURATION
+
 app = cob.App("Data Catalog", use_built_in_auth=False)
 
 app.add_page('/', 'home', home, show_in_navbar=True, footer_category=None)

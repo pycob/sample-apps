@@ -14,8 +14,11 @@ venv: $(VENV)/bin/activate
 run: venv
 	./$(VENV)/bin/python3 main.py
 
+deploy: venv
+	./$(VENV)/bin/python3 -m pycob.deploy
+
 clean:
 	rm -rf $(VENV)
 	find . -type f -name '*.pyc' -delete
 
-.PHONY: all venv run clean
+.PHONY: all venv run clean deploy
