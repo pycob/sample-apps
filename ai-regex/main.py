@@ -1,4 +1,4 @@
-# INITIALIZATION: Do not delete this comment
+# INITIALIZATION
 import pycob as cob
 import pandas as pd
 import re
@@ -33,7 +33,7 @@ def extract_pattern_from_ai_response(response):
     return "No pattern found"
 
 
-# PAGE FUNCTIONS: Do not delete this comment
+# PAGE FUNCTIONS
 def gen_regex(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Gen Regex")
     page.add_header("Python Regex from AI")

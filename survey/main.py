@@ -1,4 +1,4 @@
-# INITIALIZATION: Do not delete this comment
+# INITIALIZATION
 import pycob as cob
 import pandas as pd
 from datetime import datetime
@@ -20,7 +20,7 @@ def save_entry(app: cob.App, username, object_id, field1, field2, field3):
     }
     app.store_dict(table_id="survey", object_id=object_id, value=data)
 
-# PAGE FUNCTIONS: Do not delete this comment
+# PAGE FUNCTIONS
 def home(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Home")
     page.add_header("Survey Results")

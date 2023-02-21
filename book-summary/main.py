@@ -1,9 +1,9 @@
-# INITIALIZATION: Do not delete this comment
+# INITIALIZATION
 import pycob as cob
 
 
 
-# PAGE FUNCTIONS: Do not delete this comment
+# PAGE FUNCTIONS
 def book(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Book")
     page.add_header("Summary")

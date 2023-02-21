@@ -1,9 +1,9 @@
-# INITIALIZATION: Do not delete this comment
+# INITIALIZATION
 import pycob as cob
 
 
 
-# PAGE FUNCTIONS: Do not delete this comment
+# PAGE FUNCTIONS
 def home(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Home")
     page.add_header("Data Catalog")
