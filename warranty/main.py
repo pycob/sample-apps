@@ -171,7 +171,7 @@ def update_warranty_claim(server_request: cob.Request) -> cob.Page:
     return page
 
 def home(server_request: cob.Request) -> cob.Page:
-    page = cob.Page("Warranty Claim")
+    page = cob.Page("Warranty Claim", image="https://storage.googleapis.com/img.pycob.com/screenshot/warranty.png")
     page.add_header("Warranty Claim")
     
     survey_results = app.list_objects(table_id="claim")
