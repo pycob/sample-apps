@@ -67,9 +67,9 @@ def add_field(server_request: cob.Request) -> cob.Page:
 
             form.add_formtext("Field Name", "field_name_{}".format(i))
             options = [{"value": "short_text", "label": "Short Text"}, {"value": "email", "label": "Email"}, {"value": "long_text", "label": "Long Text"}, {"value": "dropdown", "label": "Dropdown"}]
-            form.add_formselect("Field Data Type", "field_type_{}".format(i), options=options)
-            form.add_formselect("Column Write Authorization", "column_write_auth_{}".format(i), options=[{"value": "anyone", "label": "Anyone"}, {"value": "logged_in", "label": "Logged In Users"}, {"value": "author", "label": "Author (the person who created the row)"}, {"value": "admin", "label": "Admins Only"}])
-            form.add_formselect("Column Read Authorization", "column_read_auth_{}".format(i), options=[{"value": "anyone", "label": "Anyone"}, {"value": "logged_in", "label": "Logged In Users"}, {"value": "author", "label": "Author (the person who created the row)"}, {"value": "admin", "label": "Admins Only"}])
+            form.add_formselect("Field Data Type", "field_type_{}".format(i), options=options, value="short_text")
+            form.add_formselect("Column Write Authorization", "column_write_auth_{}".format(i), options=[{"value": "anyone", "label": "Anyone"}, {"value": "logged_in", "label": "Logged In Users"}, {"value": "author", "label": "Author (the person who created the row)"}, {"value": "admin", "label": "Admins Only"}], value="author")
+            form.add_formselect("Column Read Authorization", "column_read_auth_{}".format(i), options=[{"value": "anyone", "label": "Anyone"}, {"value": "logged_in", "label": "Logged In Users"}, {"value": "author", "label": "Author (the person who created the row)"}, {"value": "admin", "label": "Admins Only"}], value="author")
             form.add_formsubmit("Add") 
 
     if i > 1:
@@ -141,7 +141,7 @@ def create_{table_name}(server_request: cob.Request) -> cob.Page:
         with page.add_card() as card:
             card.add_header("Success!")
             card.add_text("Your new row has been created.")
-            card.add_link("View {to_title(table_name)}", "/get_{table_name}?id=" + form_data["id"])
+            card.add_link("View {to_title(table_name)}", "/view_{table_name}?id=" + form_data["id"])
 
         return page
 
@@ -200,12 +200,16 @@ def generate_update_row(params: dict) -> str:
 
     code = f"""
 def update_{table_name}(server_request: cob.Request) -> cob.Page:
-    page = cob.Page("Update {table_name}")
+    page = cob.Page("Update {to_title(table_name)}")
+
+    username = server_request.get_username()
 
     {table_name}_id = server_request.params("id")
 
+    data = server_request.retrieve_dict(table_id="{table_name}", object_id={table_name}_id)
+
     with page.add_card() as card:
-        card.add_header("Update {table_name.title()}")
+        card.add_header("Update {to_title(table_name)}")
         with card.add_form(action="/update_{table_name}") as form:
             form.add_formhidden("id", {table_name}_id)
     """
@@ -226,23 +230,23 @@ def update_{table_name}(server_request: cob.Request) -> cob.Page:
             if username is not None and username != "": # Logged in users can update this column"""
         elif column_write_auth == "author":
             code += f"""
-            if username == {table_name}_author: # Only the author can update this column"""
+            if username == data['author']: # Only the author can update this column"""
         elif column_write_auth == "admin":
             code += f"""
             if username in admin_users: # Admins can update this column"""
 
         if field_type == "short_text":
             code += f"""
-                form.add_formtext("{field_name.title()}", "{field_name}")"""
+                form.add_formtext("{field_name.title()}", "{field_name}", value=data["{field_name}"] if "{field_name}" in data else "")"""
         elif field_type == "email":
             code += f"""
-                form.add_formemail("{field_name.title()}", "{field_name}")"""
+                form.add_formtext("{field_name.title()}", "{field_name}", value=data["{field_name}"] if "{field_name}" in data else "")"""
         elif field_type == "long_text":
             code += f"""
-                form.add_formtextarea("{field_name.title()}", "{field_name}")"""
+                form.add_formtextarea("{field_name.title()}", "{field_name}", value=data["{field_name}"] if "{field_name}" in data else "")"""
         elif field_type == "dropdown":
             code += f"""
-                form.add_formselect("{field_name.title()}", "{field_name}", options=[{{"value": "option_1", "label": "Option 1"}}, {{"value": "option_2", "label": "Option 2"}}])"""
+                form.add_formselect("{field_name.title()}", "{field_name}", options=[{{"value": "option_1", "label": "Option 1"}}, {{"value": "option_2", "label": "Option 2"}}], value=data["{field_name}"] if "{field_name}" in data else "")"""
 
         i += 1
 
@@ -327,10 +331,7 @@ def view_{table_name}(server_request: cob.Request) -> cob.Page:
                     table_row.add_tablecellheader("Field Name")
                     table_row.add_tablecellheader("Field Value")
             with table.add_tablebody() as table_body:
-                with table_body.add_tablerow() as table_row:
-                    table_row.add_tablecell("Order_Number")
-                    table_row.add_tablecell(data["order_number"]) 
-                    
+                
 """
 
     i = 1
@@ -343,24 +344,24 @@ def view_{table_name}(server_request: cob.Request) -> cob.Page:
 
         if column_read_auth == "anyone":
             code += f"""
-            if True: # Anyone can read this column"""
+                if True: # Anyone can read this column"""
         elif column_read_auth == "logged_in":
             code += f"""
-            if username is not None and username != "": # Logged in users can read this column"""
+                if username is not None and username != "": # Logged in users can read this column"""
         elif column_read_auth == "author":
             code += f"""
-            if username == data["author"]: # Only the author can read this column"""
+                if username == data["author"]: # Only the author can read this column"""
         elif column_read_auth == "admin":
             code += f"""
-            if username in admin_users: # Admins can read this column"""
+                if username in admin_users: # Admins can read this column"""
 
         code += f"""
-                with table_body.add_tablerow() as table_row:
-                    table_row.add_tablecell("{field_name.title()}")
-                    if "{field_name}" in data:
-                        table_row.add_tablecell(data["{field_name}"])
-                    else:
-                        table_row.add_tablecell("")"""
+                    with table_body.add_tablerow() as table_row:
+                        table_row.add_tablecell("{field_name.title()}")
+                        if "{field_name}" in data:
+                            table_row.add_tablecell(data["{field_name}"])
+                        else:
+                            table_row.add_tablecell("")"""
 
         i += 1
 
@@ -388,7 +389,7 @@ def generate_get_table(params: dict) -> str:
 
     code = f"""
 def list_{table_name}(server_request: cob.Request) -> cob.Page:
-    page = cob.Page("Get {table_name}s")
+    page = cob.Page("List of {to_title(table_name)}s")
     
     username = server_request.get_username()
 
@@ -396,7 +397,12 @@ def list_{table_name}(server_request: cob.Request) -> cob.Page:
 
     df = pd.DataFrame({to_snake(table_name)}s)
 
-    page.add_pandastable(df)
+    action_buttons = [
+        cob.Rowaction(label="View", url="/view_{table_name}?id={{id}}"),
+        cob.Rowaction(label="Delete", url="/delete_{table_name}?id={{id}}"),
+    ]
+
+    page.add_pandastable(df, hide_fields=["id"], action_buttons=action_buttons)
 
     return page           
     """
