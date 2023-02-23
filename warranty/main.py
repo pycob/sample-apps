@@ -59,7 +59,7 @@ def new_warranty_claim(server_request: cob.Request) -> cob.Page:
             form.add_formtext("Purchase Date", name="purchase_date", placeholder="Purchase Date")
             form.add_formtext("Purchase Location", name="purchase_location", placeholder="Purchase Location")
             form.add_formtext("Purchase Price", name="purchase_price", placeholder="Purchase Price")
-            form.add_textarea("Description of Issue", name="description_of_issue", placeholder="Description of Issue")
+            form.add_formtextarea("Description of Issue", name="description_of_issue", placeholder="Description of Issue")
             form.add_formsubmit("Submit")
 
     return page
@@ -79,7 +79,7 @@ def sample_warranty_claim(server_request: cob.Request) -> cob.Page:
             form.add_formtext("Purchase Date", name="purchase_date", placeholder="Purchase Date", value=fake.date())
             form.add_formtext("Purchase Location", name="purchase_location", placeholder="Purchase Location", value=fake.city())
             form.add_formtext("Purchase Price", name="purchase_price", placeholder="Purchase Price", value=str(fake.pricetag()))
-            form.add_textarea("Description of Issue", name="description_of_issue", placeholder="Description of Issue")
+            form.add_formtextarea("Description of Issue", name="description_of_issue", placeholder="Description of Issue")
             form.add_formsubmit("Submit")
 
     return page
