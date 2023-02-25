@@ -1,3 +1,5 @@
 **/pycob_api_key.txt
 **/venv
+**/tmp
+**/.ipynb_checkpoints
 app-wizard/output.py
