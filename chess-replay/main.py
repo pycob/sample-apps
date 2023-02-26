@@ -13,7 +13,7 @@ def get_frames(game: chess.pgn.Game) -> list:
 
     frames = []
 
-    for i in range(0, 7):
+    while True:
         current_board = current_game.board()
 
         last_move = current_game.move
@@ -55,6 +55,9 @@ def get_frames(game: chess.pgn.Game) -> list:
             # frames.append(Frame(svg, "Title", "Subtitle"))
             frames.append(svg)
 
+        if current_game.is_end():
+            break
+
         current_game = current_game.next()
 
     return frames
@@ -65,25 +68,38 @@ def home(server_request: cob.Request) -> cob.Page:
     page.add_text("This is a chess replay app. It allows you to replay chess games from the PGN file format.")
 
     pgn_param = server_request.params("pgn")
+    size = server_request.params("size")
 
-    if pgn_param is None or pgn_param == "":
-        with page.add_card() as card:
-            card.add_header("Upload PGN")
-            with card.add_form(action="/") as form:
-                form.add_formtextarea("PGN", "pgn", value="1. e4 e5 2. Nf3 f5 3. d4 g5")
-                form.add_formsubmit("Upload")
+    scholars_mate = """
+1. e4 e5
+2. Qh5 Nc6
+3. Bc4 Nf6
+4. Qxf7    
+    """
+
+    with page.add_card() as card:
+        card.add_header("Game Data")
+        card.add_link("Portable Game Notation", "https://en.wikipedia.org/wiki/Portable_Game_Notation")
+        with card.add_form(action="/") as form:
+            form.add_formtextarea("PGN", "pgn", value=scholars_mate if pgn_param is None or pgn_param=="" else pgn_param)
+            form.add_formselect("Size", "size", ["Small", "Full Screen"], value="Small")
+            form.add_formsubmit("Playback")
         
-        return page
-
+    if pgn_param is None or pgn_param == "":
+        pgn_param = scholars_mate
+    
     pgn = io.StringIO(pgn_param)
     game = chess.pgn.read_game(pgn)
 
     frames = get_frames(game)
 
-    js = """
-    <div class="flex h-screen">
-        <div id="svg-container" class="mx-auto"></div>
+    js = f"""
+    <div class="flex">
+        <div id="svg-container" class="mx-auto {'h-screen' if size == 'Full Screen' else ''}"></div>
     </div>
+    """
+
+    js += """
     <script>
     function displaySVGs(svgArray) {
     let index = 0;
@@ -114,8 +130,8 @@ def home(server_request: cob.Request) -> cob.Page:
 
     return page
 
-app = cob.App("")
+app = cob.App("Replay Chess Games")
 
-app.register_function(home)
+app.register_function(home, show_in_navbar=False)
 
 server = app.run()
