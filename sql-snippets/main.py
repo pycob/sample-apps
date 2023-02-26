@@ -49,11 +49,11 @@ def create_snippet(server_request: cob.Request) -> cob.Page:
         with card.add_form(action="/create_snippet", method="POST") as form:
             
             if username is not None and username != "": # Logged in users can write to this column
-                form.add_formtext("Name", "Name")
+                form.add_formtext("Query Name", "Name", placeholder="Descriptive Name for this Query")
             if username is not None and username != "": # Logged in users can write to this column
-                form.add_formtext("Tables", "Tables")
+                form.add_formtext("Tables Used", "Tables", placeholder="Table1, Table2")
             if username is not None and username != "": # Logged in users can write to this column
-                form.add_formtextarea("Query", "Query")
+                form.add_formtextarea("Query", "Query", placeholder="SELECT *\nFROM Table1\nWHERE ...")
 
             form.add_formsubmit("Create")
     
@@ -147,7 +147,8 @@ def view_snippet(server_request: cob.Request) -> cob.Page:
                     with table_body.add_tablerow() as table_row:
                         table_row.add_tablecell("Query")
                         if "Query" in data:
-                            table_row.add_tablecell(data["Query"])
+                            table_row.add_tablecell("See below")
+                            page.add_codeeditor(data["Query"], language="sql")
                         else:
                             table_row.add_tablecell("")
         with card.add_form(action="/delete_snippet") as form:
@@ -172,11 +173,11 @@ def list_snippet(server_request: cob.Request) -> cob.Page:
     df = pd.DataFrame(snippets)
 
     action_buttons = [
-        cob.Rowaction(label="View", url="/view_snippet?id={id}"),
+        cob.Rowaction(label="View", url="/view_snippet?id={id}", open_in_new_window=False),
         cob.Rowaction(label="Delete", url="/delete_snippet?id={id}"),
     ]
 
-    page.add_pandastable(df, hide_fields=["id"], action_buttons=action_buttons)
+    page.add_pandastable(df, hide_fields=["id", "Query"], action_buttons=action_buttons)
 
     return page           
     
