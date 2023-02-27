@@ -13,9 +13,9 @@ app = cob.App("Data Frame Explorer")
 df = app.from_cloud_pickle('vehicles.pkl')
 
 def home(server_request: cob.Request) -> cob.Page:
-    page = cob.Page()
+    page = cob.Page("Dataframe Explorer")
 
-    page.add_header('Data Frame Explorer')
+    page.add_header('Dataframe Explorer')
 
     rows = server_request.params('rows')
     columns = server_request.params('columns')

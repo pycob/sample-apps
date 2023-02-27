@@ -3,12 +3,14 @@ import pycob as cob
 import pandas as pd
 import datetime
 import uuid
+import sqlite3 as db
 
 # List of admin usernames.
 # TODO: Change this to the list of usernames of your admins.
 admin_users = ["admin"]
 
 # HELPER FUNCTIONS
+conn = db.connect('northwind.db', check_same_thread=False)
 
 # PAGE FUNCTIONS
 # Each page function takes in a server_request object and returns a page object.
@@ -95,7 +97,7 @@ def delete_snippet(server_request: cob.Request) -> cob.Page:
     # Only the author can delete this row
     if username is not None and username == data["author"]:
         if server_request.params("confirm") == "true":
-            server_request.delete_dict(table_id="warranty_claim", object_id=warranty_claim_id)
+            server_request.delete_dict(table_id="snippet", object_id=snippet_id)
             with page.add_card() as card:
                 card.add_alert("Deleted", "Success", "green")
                 card.add_link("Home", "/")
@@ -161,8 +163,40 @@ def view_snippet(server_request: cob.Request) -> cob.Page:
             form.add_formhidden("id", id)
             form.add_formsubmit("Edit")
 
+    page.add_html("""
+    <button class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="runCode()">Run SQL</button>
+    <script>
+        function runCode() {
+            var code = editor.getValue();
+
+            document.getElementById("sql_val").value = code
+
+            document.getElementById("code_runner_form").submit()
+        }
+    </script>
+    <form id="code_runner_form" class="hidden" target="code_runner" action="/run_snippet" method="POST">
+        <input id="sql_val" name="code" type="hidden" value="blank" />
+        <input id="save_val" name="save" type="hidden" value="false" />
+        <input type="hidden" name="page_name" value="'''+ page_name +'''" />
+        <input type="submit">
+    </form>
+    """)
+
     return page   
-    
+
+def run_snippet(server_request: cob.Request) -> cob.Page:
+    page = cob.Page("Snippet")
+
+    code = server_request.params("code")
+
+    page.add_codeeditor(code, language="sql")
+
+    df = pd.read_sql_query(code, conn)
+
+    page.add_datagrid(df, action_buttons=[])
+
+    return page
+
 def list_snippet(server_request: cob.Request) -> cob.Page:
     page = cob.Page("List of Snippets")
     
@@ -188,6 +222,7 @@ app.register_function(create_snippet, require_login=True)
 app.register_function(update_snippet, require_login=True, show_in_navbar=False, footer_category=None)
 app.register_function(delete_snippet, require_login=True, show_in_navbar=False, footer_category=None)
 app.register_function(view_snippet, show_in_navbar=False, footer_category=None)
+app.register_function(run_snippet, show_in_navbar=False, footer_category=None)
 
 server = app.run()
 # Run this using `python3 main.py` or `python main.py` depending on your system.
