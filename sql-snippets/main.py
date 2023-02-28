@@ -114,13 +114,14 @@ def delete_snippet(server_request: cob.Request) -> cob.Page:
     return page
     
 def view_snippet(server_request: cob.Request) -> cob.Page:
-    page = cob.Page("Snippet")
 
     username = server_request.get_username()
 
     id = server_request.params("id")
 
     data = server_request.retrieve_dict(table_id="snippet", object_id=id)
+
+    page = cob.Page("Snippet" if "Name" not in data else data["Name"])
 
     with page.add_card() as card:
         with card.add_rawtable() as table:
