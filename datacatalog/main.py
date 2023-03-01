@@ -5,6 +5,7 @@ import pandas as pd
 import sqlite3 as db
 from dataclasses import dataclass, asdict
 from typing import List
+from datetime import datetime
 import json
 
 # HELPER FUNCTIONS
@@ -17,22 +18,41 @@ conn = db.connect('northwind.db', check_same_thread=False)
 # Python @dataclass is a new feature in Python 3.7 that allows you to define a class with a bunch of attributes and their types.
 # It just makes it easier to define a class with a bunch of attributes without having to define the __init__ method.
 @dataclass
+class Datasets:
+    datasets: list[Dataset]
+
+    def to_dataframe(self) -> pd.DataFrame:
+        records = []
+
+        for dataset in self.datasets:
+            records.extend(dataset.to_dataframe().to_dict('records'))
+        
+        return pd.DataFrame(records)
+
+    def get_dataset_index(self, dataset_name: str) -> int:
+        for i in range(len(self.datasets)):
+            if self.datasets[i].name == dataset_name:
+                return i
+
+        return -1
+
+@dataclass
 class Dataset:
-    id: str
     name: str
     readable_name: str
     description: str
     tables: list[Table]
 
-    def to_dataframe(self):
+    def to_dataframe(self) -> pd.DataFrame:
         records = []
 
         for table in self.tables:
             row = {}
-            row['dataset_id'] = self.id
             row['dataset_name'] = self.name
+            row['dataset_readable_name'] = self.readable_name
             row['dataset_description'] = self.description
-            row['table_id'] = table.name
+            row['table_name'] = table.name
+            row['table_readable_name'] = table.readable_name
             row['table_description'] = table.description
             row['table_last_updated'] = table.last_updated
             row['table_type'] = table.type
@@ -40,6 +60,13 @@ class Dataset:
             records.append(row)
         
         return pd.DataFrame(records)
+
+    def get_table_index(self, table_name: str) -> int:
+        for i in range(len(self.tables)):
+            if self.tables[i].name == table_name:
+                return i
+
+        return -1
 
 @dataclass
 class Table:
@@ -49,13 +76,15 @@ class Table:
     last_updated: str
     type: str
     columns: list[Column]
+    sample: pd.DataFrame
 
-    def to_dataframe(self):
+    def to_dataframe(self) -> pd.DataFrame:
         records = []
 
         for column in self.columns:
             row = {}
             row['column_name'] = column.name
+            row['column_readable_name'] = column.readable_name
             row['column_description'] = column.description
             row['column_data_type'] = column.data_type
             row['column_nullable'] = column.nullable
@@ -85,38 +114,63 @@ class Column:
     num_rows: int
 
 # PyCob has a built-in cloud pickle feature that allows you to save and load objects to the cloud.
+dsets: Datasets
 try:
     print("Loading from cloud pickle")
-    dset = app.from_cloud_pickle("northwind.pkl")
+    dsets = app.from_cloud_pickle("northwind.pkl")
 except Exception as e:
     print(f"Error getting cloud pickle {e}")
-    dset = None
+    dsets = None
 
-def update_dataset(params: dict):
-    global dset
+def to_readable_name(name: str) -> str:
+    import re
+
+    name = re.sub(r'(?<!^)(?=[A-Z])', '_', name).lower()
+
+    return name.replace("_", " ").title()
+
+def update_dataset(params: dict) -> None:
+    global dsets
 
     # Parameters are of the form
-    # /update?dataset_name=124124&table_name=Categories&table_type=Dimension&description=124124&column_CategoryID_readable_name=CategoryID&column_CategoryID_description=test1&column_CategoryName_readable_name=CategoryName&column_CategoryName_description=test2&column_Description_readable_name=Description&column_Description_description=test3&column_Picture_readable_name=Picture&column_Picture_description=test4
+    # /update?dataset_name=northwind&table_name=Categories&dataset_readable_name=Northwind&table_readable_name=Categories&table_type=Dimension&table_description=Description&column_CategoryID_readable_name=Category+ID&column_CategoryID_description=test+1&column_CategoryName_readable_name=Category+Name&column_CategoryName_description=test+2&column_Description_readable_name=Description&column_Description_description=test+3&column_Picture_readable_name=Picture&column_Picture_description=test+4
 
     dataset_name = params.get("dataset_name")
+    dataset_readable_name = params.get("dataset_readable_name")
     table_name = params.get("table_name")
+    table_readable_name = params.get("table_readable_name")
     table_type = params.get("table_type")
-    description = params.get("description")
+    table_description = params.get("table_description")
 
+    dataset_index = dsets.get_dataset_index(dataset_name)
 
-    # Get the columns
-    columns = []
-    for key in params.keys():
-        if key.startswith("column_"):
-            column_name = key.split("_")[1]
-            column_description = params.get(key)
-            column = Column(name=column_name, readable_name=column_name, description=column_description, data_type="", nullable=False, min=0, max=0, mean=0, num_distinct=0, num_null=0, num_rows=0)
-            columns.append(column)
+    if dataset_index == -1:
+        return None
+    
+    dset = dsets.datasets[dataset_index]
 
+    table_index = dset.get_table_index(table_name)
 
-    app.to_cloud_pickle(dset, "northwind.pkl")
+    if table_index == -1:
+        return None
+    
+    table = dset.tables[table_index]
 
-    print(f"Updated dataset {dset}")
+    # Update the table
+    table.readable_name = table_readable_name
+    table.description = table_description
+    table.type = table_type
+
+    # Update the dataset
+    dset.readable_name = dataset_readable_name
+
+    # Update the columns
+
+    for column in table.columns:
+        column.readable_name = params.get(f"column_{column.name}_readable_name")
+        column.description = params.get(f"column_{column.name}_description")                    
+
+    app.to_cloud_pickle(dsets, "northwind.pkl")
 
 
 # PAGE FUNCTIONS
@@ -124,42 +178,60 @@ def tables(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Tables")
     page.add_header("Tables")
 
-    if dset is None:
+    if dsets is None:
         page.add_alert("Refresh required", "Error", "red")
         return page
 
     action_buttons = [
-        cob.Rowaction(label="Edit", url="/edit?dataset_name={dataset_id}&table_name={table_id}", open_in_new_window=True),
-        cob.Rowaction(label="View", url="/table_detail?dataset_name={dataset_id}&table_name={table_id}", open_in_new_window=True),
+        cob.Rowaction(label="Edit", url="/edit?dataset_name={dataset_name}&table_name={table_name}", open_in_new_window=False),
+        cob.Rowaction(label="View", url="/table_detail?dataset_name={dataset_name}&table_name={table_name}", open_in_new_window=False),
     ]
 
     
-    page.add_pandastable(dset.to_dataframe(), action_buttons=action_buttons)
+    page.add_pandastable(dsets.to_dataframe(), action_buttons=action_buttons)
     
     return page
     
 def table_detail(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Table Detail")
+    dataset_name = server_request.params("dataset_name")
     table_name = server_request.params("table_name")
     
-    if dset is None:
+    if dsets is None:
         page.add_alert("Refresh required", "Error", "red")
         return page
+    
+    page.add_header(f'Table Detail: {dataset_name} - {table_name}')
 
-    table = list(filter(lambda x: x.name == table_name, dset.tables))
-                
-    page.add_header(f'Table Detail: {table_name}')
+    dataset_index = dsets.get_dataset_index(dataset_name)
 
-    if table is not None and len(table) > 0:
-        table = table[0]
+    if dataset_index is None or dataset_index < 0:
+        page.add_alert("Dataset not found", "Error", "red")
+        return page
 
-        page.add_header(f"Description: {table.description}", size=2)
-        page.add_header(f"Last Updated: {table.last_updated}", size=2)
-        page.add_header(f"Type: {table.type}", size=2)
+    dset = dsets.datasets[dataset_index]
+
+    table_index = dset.get_table_index(table_name)
+
+    if table_index is None or table_index < 0:
+        page.add_alert("Table not found", "Error", "red")
+        return page
+
+    table = dset.tables[table_index]
+
+    page.add_header(f"Description:", size=2)
+    page.add_text(table.description if table.description != "" else "No description")
+    page.add_header(f"Last Updated:", size=2)
+    page.add_text(f"{table.last_updated if table.last_updated != '' else 'No last updated date'}")
+    page.add_header(f"Type:", size=2)
+    page.add_text(f"{table.type if table.type != '' else 'No type'}")
 
     page.add_pandastable(table.to_dataframe(), action_buttons=[])
 
-    page.add_link("Edit", f"/edit?dataset_name={dset.name}&table_name={table_name}")
+    page.add_header("Sample Data", size=2)
+    page.add_pandastable(table.sample, action_buttons=[])
+
+    page.add_link("Edit Table Metadata", f"/edit?dataset_name={dset.name}&table_name={table_name}")
     
     return page
 
@@ -169,36 +241,56 @@ def edit(server_request: cob.Request) -> cob.Page:
     dataset_name = server_request.params("dataset_name")
     table_name = server_request.params("table_name")    
 
-    if dset is None:
-        page.add_alert("Refresh required", "Error", "red")
+    dataset_index = dsets.get_dataset_index(dataset_name)
+
+    if dataset_index is None or dataset_index < 0:
+        page.add_alert("Dataset not found", "Error", "red")
         return page
+
+    dset = dsets.datasets[dataset_index]
+
+    table_index = dset.get_table_index(table_name)
+
+    if table_index is None or table_index < 0:
+        page.add_alert("Table not found", "Error", "red")
+        return page
+
+    table = dset.tables[table_index]
 
     with page.add_card() as card:
         card.add_header(f"Edit")
-        card.add_header(f"{table_name}", size=2)
+        card.add_header(f"{dset.readable_name} - {table.readable_name}", size=2)
 
-        with card.add_form(action="/update") as form:            
-            form.add_formtext("Dataset Name", "dataset_name", value=dataset_name)
-            form.add_formtext("Table Name", "table_name", value=table_name)
+        with card.add_form(action="/update") as form:
+            form.add_formhidden("dataset_name", value=dataset_name)
+            form.add_formhidden("table_name", value=table_name)
+            form.add_formtext("Dataset Readable Name", "dataset_readable_name", value=dset.readable_name)
+            form.add_formtext("Table Readable Name", "table_readable_name", value=table.readable_name)
 
-            table = list(filter(lambda x: x.name == table_name, dset.tables))
-            if table is not None and len(table) > 0:
-                form.add_formselect("Table Type", "table_type", options=["Fact", "Dimension"], value=table[0].type)
-                form.add_formtextarea("Description", "description", placeholder="Table Description", value=table[0].description)
+            table = dset.tables[table_index]
 
-                for column in table[0].columns:
-                    form.add_text(f"Column <code>{column.name}</code>")
-                    with form.add_container(grid_columns=2) as container:
-                        container.add_formtext(f"Readable Name", f"column_{column.name}_readable_name", value=column.readable_name)
-                        container.add_formtextarea(f"Description", f"column_{column.name}_description", value=column.description, placeholder="Column Description")
-            else:
-                form.add_text("No columns found")
+            form.add_formselect("Table Type", "table_type", options=["Fact", "Dimension"], value=table.type)
+            form.add_formtextarea("Table Description", "table_description", placeholder="Table Description", value=table.description)
+
+            for column in table.columns:
+                form.add_text(f"Column <code>{column.name}</code>")
+                with form.add_container(grid_columns=2) as container:
+                    container.add_formtext(f"Readable Name", f"column_{column.name}_readable_name", value=column.readable_name)
+                    container.add_formtextarea(f"Description", f"column_{column.name}_description", value=column.description, placeholder="Column Description")
 
 
             form.add_formsubmit("Save")
 
     return page
 
+# TODO: You can customize this to your needs
+# This is a sample for SQLite and will need to be updated for your database
+# The rest of the app can stay the same. The only thing that this function needs to do
+# is update the global dsets variable, which is a Datasets object
+#
+# As an alternative, you can also create the dsets object in a Jupyter Notebook
+# and use app.to_cloud_pickle() to save it to PyCob Cloud.
+# The app uses app.from_cloud_pickle() to load the dsets object from PyCob Cloud.
 def refresh(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Refresh")
     page.add_header("Refresh")
@@ -217,31 +309,44 @@ def refresh(server_request: cob.Request) -> cob.Page:
         return page
     
     # Get datasets
-    # Since we're using SQLite, there's no concept of a dataset so we'll create a blank one
-    global dset
-    dset = Dataset(id='', name='Northwind', readable_name="Northwind", description='A sample dataset containing customer and order information', tables=[])
+    # Since we're using SQLite, there's no concept of a dataset so we'll create a placeholder one called "northwind"
+    global dsets
+    dsets = Datasets(datasets=[])
+
+    dset = Dataset(name='northwind', readable_name=to_readable_name("northwind"), description='A sample dataset containing customer and order information', tables=[])
     
     # Get tables
     tables = pd.read_sql_query("SELECT name FROM sqlite_master WHERE type='table'", conn)
     # page.add_pandastable(tables, action_buttons=[])
 
-    # page.add_pandastable(columns, action_buttons=[])
-
     for table_name in tables['name']:
         # Get table metadata
-        table = Table(name=table_name, readable_name=table_name, description='', last_updated='', type='', columns=[])
         
         # Get columns
         columns = pd.read_sql_query(f"PRAGMA table_info('{table_name}')", conn)
+        page.add_pandastable(columns, action_buttons=[])
         
+        sample = pd.read_sql_query(f"SELECT * FROM \"{table_name}\" LIMIT 10", conn)
+        table = Table(name=table_name, readable_name=to_readable_name(table_name), description='', last_updated=datetime.now(), type='', columns=[], sample=sample)
+
         # Get column metadata
         for label, col in columns.iterrows():
-            column = Column(name=col['name'], readable_name=col['name'], description='', data_type='type', nullable='', min=None, max=None, mean=None, num_distinct=None, num_null=None, num_rows=None)
+            # Get min, max, mean, num_distinct, num_null, num_rows
+            stats_df = pd.read_sql_query(f"SELECT MIN({col['name']}) as min, MAX({col['name']}) as max, AVG({col['name']}) as mean, COUNT(DISTINCT {col['name']}) as num_distinct, COUNT({col['name']}) as num_rows, COUNT({col['name']} IS NULL) as num_null, COUNT(*) as num_rows FROM \"{table_name}\"", conn)
+
+            try:
+                stats = stats_df.iloc[0].to_dict()
+                column = Column(name=col['name'], readable_name=to_readable_name(col['name']), description='', data_type=col['type'], nullable='Nullable' if col['notnull']==0 else 'Not Nullable', min=stats['min'], max=stats['max'], mean=stats['mean'], num_distinct=stats['num_distinct'], num_null=stats['num_null'], num_rows=stats['num_rows'])
+            except:
+                column = Column(name=col['name'], readable_name=to_readable_name(col['name']), description='', data_type=col['type'], nullable='Nullable' if col['notnull']==0 else 'Not Nullable', min=None, max=None, mean=None, num_distinct=None, num_null=None, num_rows=None)
+
             table.columns.append(column)
         
         dset.tables.append(table)
-        
-    server_request.app.to_cloud_pickle(dset, 'northwind.pkl')
+
+    dsets.datasets.append(dset)
+
+    server_request.app.to_cloud_pickle(dsets, 'northwind.pkl')
     page.add_link("Refreshed. See tables", "/tables")
     
     return page
