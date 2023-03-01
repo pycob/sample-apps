@@ -2,23 +2,30 @@
 import pycob as cob
 import plotly.express as px
 
+app = cob.App("PyPi Analytics", use_built_in_auth=False)
+pypi_projects_by_month = app.from_cloud_pickle('pypi_projects_by_month.pkl')
+pypi_projects_by_month = app.from_cloud_pickle('pypi_projects_by_month.pkl')
 
 # PAGE FUNCTIONS
 def home(server_request: cob.Request) -> cob.Page:
     page = cob.Page("PyPi Analytics")
     page.add_header("PyPi Analytics")
-    
-    pypi_projects_by_month = server_request.app.from_cloud_pickle('pypi_projects_by_month.pkl')
+    page.add_text("PyPi analytics enables Python engineers to identify usage trends with Python packages as an input for picking the right package")
+    page.add_link("See the source code for this app", "https://github.com/pycob/sample-apps/blob/main/pypi-analytics/main.py")
+    page.add_text("")
     
     top_projects = pypi_projects_by_month.groupby('pypi_project').sum().sort_values('avg_downloads_per_day', ascending=False).reset_index().head(50)
 
     action_buttons = [
-        cob.Rowaction(label="{pypi_project}", url="/project_detail?project_name={pypi_project}", open_in_new_window=True),
+        cob.Rowaction(label="Analytics", url="/project_detail?project_name={pypi_project}", open_in_new_window=True),
+        cob.Rowaction(label="Project", url="https://pypi.org/project/{pypi_project}", open_in_new_window=True),
     ]
     
-    with page.add_form(action="/project_detail") as form:
-        form.add_formtext(name="project_name", label="Project Name", placeholder="Enter a project name")
-        form.add_formsubmit("Analyze")
+    with page.add_card() as card:
+        card.add_header("Analyze a Project")
+        with card.add_form(action="/project_detail") as form:
+            form.add_formtext(name="project_name", label="Project Name", placeholder="Enter a project name")
+            form.add_formsubmit("Analyze")
 
     page.add_text("")
 
@@ -29,11 +36,12 @@ def home(server_request: cob.Request) -> cob.Page:
 
 def project_detail(server_request: cob.Request) -> cob.Page:
     page = cob.Page("PyPi Analytics")
-    page.add_header("PyPi Analytics")
     
     project_name = server_request.params('project_name')
     compare_to = server_request.params('compare_to')
     subtitle = server_request.params('subtitle')
+
+    page.add_header(f"PyPi Analytics for <code>{project_name}</code>")
 
     if not subtitle:
         with page.add_form(action="/project_detail") as form:
@@ -43,8 +51,6 @@ def project_detail(server_request: cob.Request) -> cob.Page:
             form.add_formsubmit("Update Subtitle")
     else:
         page.add_header(f"{subtitle}", size=4)
-    
-    pypi_projects_by_month = server_request.app.from_cloud_pickle('pypi_projects_by_month.pkl')
     
     if compare_to:
         project_detail = pypi_projects_by_month[pypi_projects_by_month['pypi_project'].isin([project_name, compare_to])]
@@ -65,8 +71,6 @@ def project_detail(server_request: cob.Request) -> cob.Page:
     return page    
     
 # APP CONFIGURATION
-
-app = cob.App("PyPi Analytics", use_built_in_auth=False)
 
 app.register_function(home, show_in_navbar=False)
 app.register_function(project_detail, show_in_navbar=False)
