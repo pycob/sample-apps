@@ -35,6 +35,8 @@ def create_snippet(server_request: cob.Request) -> cob.Page:
         form_data["updated_at"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         # A UUID is a unique identifier that can be used to identify a row in the database.        
         form_data["id"] = str(uuid.uuid4())
+        form_data["last_run"] = ""
+        form_data["rows_returned"] = 0
 
         # Insert the new row into the database.
         server_request.store_dict(table_id="snippet", object_id=form_data["id"], value=form_data)
@@ -67,18 +69,22 @@ def update_snippet(server_request: cob.Request) -> cob.Page:
 
     snippet_id = server_request.params("id")
 
+    data = server_request.retrieve_dict(table_id="snippet", object_id=snippet_id)
+
     form_data = server_request.params()
     if "Query" in form_data:
-        form_data["updated_at"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        form_data["author"] = username
-        server_request.store_dict(table_id="snippet", object_id=snippet_id, value=form_data)
+        data["updated_at"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        data["author"] = username
+        data["Query"] = form_data["Query"]
+        data["Name"] = form_data["Name"]
+        data["Tables"] = form_data["Tables"]        
+        server_request.store_dict(table_id="snippet", object_id=snippet_id, value=data)
         with page.add_card() as card:
             card.add_header("Success!")
             card.add_text("Your row has been updated.")
             card.add_link("View Snippet", "/view_snippet?id=" + snippet_id)
         return page
 
-    data = server_request.retrieve_dict(table_id="snippet", object_id=snippet_id)
 
     with page.add_card() as card:
         card.add_header("Update Snippet")
@@ -148,38 +154,11 @@ def view_snippet(server_request: cob.Request) -> cob.Page:
                     form.add_formsubmit("Edit")
 
     with page.add_card() as card:
-        with card.add_rawtable() as table:
-            with table.add_tablehead() as table_head:
-                with table_head.add_tablerow() as table_row:
-                    table_row.add_tablecellheader("Field Name")
-                    table_row.add_tablecellheader("Field Value")
-            with table.add_tablebody() as table_body:
-                
+        # Put the data into a dataframe, excluding the query
+        df = pd.DataFrame(pd.Series(data, name="Fields")).reset_index().query("index != 'Query'")
+        card.add_pandastable(df, action_buttons=[])
 
-                if True: # Anyone can read this column
-                    with table_body.add_tablerow() as table_row:
-                        table_row.add_tablecell("Name")
-                        if "Name" in data:
-                            table_row.add_tablecell(data["Name"])
-                        else:
-                            table_row.add_tablecell("")
-                if True: # Anyone can read this column
-                    with table_body.add_tablerow() as table_row:
-                        table_row.add_tablecell("Tables")
-                        if "Tables" in data:
-                            table_row.add_tablecell(data["Tables"])
-                        else:
-                            table_row.add_tablecell("")
-                if True: # Anyone can read this column
-                    with table_body.add_tablerow() as table_row:
-                        table_row.add_tablecell("Query")
-                        if "Query" in data:
-                            table_row.add_tablecell("See below")
-                            page.add_codeeditor(data["Query"], language="sql")
-                        else:
-                            table_row.add_tablecell("")
-    
-
+    page.add_codeeditor(data["Query"], "sql")
 
     page.add_html("""
     <button class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="runCode()">Run SQL</button>
@@ -192,13 +171,21 @@ def view_snippet(server_request: cob.Request) -> cob.Page:
             document.getElementById("code_runner_form").submit()
         }
     </script>
+    """+
+    f"""
     <form id="code_runner_form" class="hidden" target="code_runner" action="/run_snippet" method="POST">
         <input id="sql_val" name="code" type="hidden" value="blank" />
-        <input id="save_val" name="save" type="hidden" value="false" />
-        <input type="hidden" name="page_name" value="'''+ page_name +'''" />
+        <input id="id" name="id" type="hidden" value="{id}" />
         <input type="submit">
     </form>
     """)
+
+    try:
+        df = server_request.app.from_cloud_pickle(f"{id}.pkl")
+        page.add_header("Cached Results")
+        page.add_datagrid(df, action_buttons=[])
+    except:
+        page.add_text("No cached results found. Run the SQL to see the results.")
 
     return page   
 
@@ -206,12 +193,22 @@ def run_snippet(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Snippet")
 
     code = server_request.params("code")
+    id = server_request.params("id")
 
     page.add_codeeditor(code, language="sql")
 
     df = pd.read_sql_query(code, conn)
 
+    server_request.app.to_cloud_pickle(df, f"{id}.pkl")
+
     page.add_datagrid(df, action_buttons=[])
+
+    data = server_request.retrieve_dict(table_id="snippet", object_id=id)
+
+    data["last_run"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    data["rows_returned"] = len(df)
+
+    server_request.store_dict(table_id="snippet", object_id=id, value=data)
 
     return page
 
