@@ -1,3 +1,4 @@
 pandas
 pycob
 gunicorn
+elosports
