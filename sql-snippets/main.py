@@ -48,8 +48,7 @@ def create_snippet(server_request: cob.Request) -> cob.Page:
 
     with page.add_card() as card:
         card.add_header("Create Snippet")
-        with card.add_form(action="/create_snippet", method="POST") as form:
-            
+        with card.add_form(action="/create_snippet", method="POST") as form:            
             if username is not None and username != "": # Logged in users can write to this column
                 form.add_formtext("Query Name", "Name", placeholder="Descriptive Name for this Query")
             if username is not None and username != "": # Logged in users can write to this column
@@ -68,11 +67,22 @@ def update_snippet(server_request: cob.Request) -> cob.Page:
 
     snippet_id = server_request.params("id")
 
+    form_data = server_request.params()
+    if "Query" in form_data:
+        form_data["updated_at"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        form_data["author"] = username
+        server_request.store_dict(table_id="snippet", object_id=snippet_id, value=form_data)
+        with page.add_card() as card:
+            card.add_header("Success!")
+            card.add_text("Your row has been updated.")
+            card.add_link("View Snippet", "/view_snippet?id=" + snippet_id)
+        return page
+
     data = server_request.retrieve_dict(table_id="snippet", object_id=snippet_id)
 
     with page.add_card() as card:
         card.add_header("Update Snippet")
-        with card.add_form(action="/update_snippet") as form:
+        with card.add_form(action="/update_snippet", method="POST") as form:
             form.add_formhidden("id", snippet_id)
     
             if username == data['author']: # Only the author can update this column
@@ -123,6 +133,20 @@ def view_snippet(server_request: cob.Request) -> cob.Page:
 
     page = cob.Page("Snippet" if "Name" not in data else data["Name"])
 
+    with page.add_container(grid_columns=6) as container:
+        container.add_header("Snippet" if "Name" not in data else data["Name"], classes="col-span-3")
+
+        with container.add_container(grid_columns=2) as actions:
+            with actions.add_container() as delete:
+                with delete.add_form(action="/delete_snippet") as form:
+                    form.add_formhidden("id", id)
+                    form.add_formsubmit("Delete")
+            
+            with actions.add_container() as edit:
+                with edit.add_form(action="/update_snippet") as form:
+                    form.add_formhidden("id", id)
+                    form.add_formsubmit("Edit")
+
     with page.add_card() as card:
         with card.add_rawtable() as table:
             with table.add_tablehead() as table_head:
@@ -154,15 +178,8 @@ def view_snippet(server_request: cob.Request) -> cob.Page:
                             page.add_codeeditor(data["Query"], language="sql")
                         else:
                             table_row.add_tablecell("")
-        with card.add_form(action="/delete_snippet") as form:
-            form.add_formhidden("id", id)
-            form.add_formsubmit("Delete")
-        
-        card.add_text("")
+    
 
-        with card.add_form(action="/update_snippet") as form:
-            form.add_formhidden("id", id)
-            form.add_formsubmit("Edit")
 
     page.add_html("""
     <button class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="runCode()">Run SQL</button>
@@ -198,8 +215,9 @@ def run_snippet(server_request: cob.Request) -> cob.Page:
 
     return page
 
-def list_snippet(server_request: cob.Request) -> cob.Page:
-    page = cob.Page("List of Snippets")
+def all_snippets(server_request: cob.Request) -> cob.Page:
+    page = cob.Page("All Snippets")
+    page.add_header("All Snippets")
     
     username = server_request.get_username()
 
@@ -209,7 +227,6 @@ def list_snippet(server_request: cob.Request) -> cob.Page:
 
     action_buttons = [
         cob.Rowaction(label="View", url="/view_snippet?id={id}", open_in_new_window=False),
-        cob.Rowaction(label="Delete", url="/delete_snippet?id={id}"),
     ]
 
     page.add_pandastable(df, hide_fields=["id", "Query"], action_buttons=action_buttons)
@@ -217,8 +234,8 @@ def list_snippet(server_request: cob.Request) -> cob.Page:
     return page           
     
 # APP CONFIGURATION
-app = cob.App("Snippet", use_built_in_auth=True)
-app.register_function(list_snippet)
+app = cob.App("SQL Snippets", use_built_in_auth=True)
+app.register_function(all_snippets)
 app.register_function(create_snippet, require_login=True)
 app.register_function(update_snippet, require_login=True, show_in_navbar=False, footer_category=None)
 app.register_function(delete_snippet, require_login=True, show_in_navbar=False, footer_category=None)
