@@ -230,13 +230,13 @@ def table_detail(server_request: cob.Request) -> cob.Page:
     # Make the field names more readable
     table_df['Field'] = table_df['Field'].map(lambda x: x.replace("_", " ").title())
 
-    page.add_pandastable(table_df, action_buttons=[])
+    page.add_pandastable(table_df)
 
     page.add_header("Columns", size=2)
-    page.add_pandastable(table.to_dataframe(), action_buttons=[])
+    page.add_pandastable(table.to_dataframe())
 
     page.add_header("Sample Data", size=2)
-    page.add_pandastable(table.sample, action_buttons=[])
+    page.add_pandastable(table.sample)
 
     page.add_link("Edit Table Metadata", f"/edit?dataset_name={dset.name}&table_name={table_name}")
     
@@ -324,16 +324,24 @@ def refresh(server_request: cob.Request) -> cob.Page:
     
     # Get tables
     tables = pd.read_sql_query("SELECT name FROM sqlite_master WHERE type='table'", conn)
-    # page.add_pandastable(tables, action_buttons=[])
+    # page.add_pandastable(tables)
 
     for table_name in tables['name']:
         # Get table metadata
         
         # Get columns
         columns = pd.read_sql_query(f"PRAGMA table_info('{table_name}')", conn)
-        page.add_pandastable(columns, action_buttons=[])
+        
+        # Remove the "Picture" column from the sample data
+        columns = columns[columns['name'] != 'Picture']
+
+        page.add_pandastable(columns)
         
         sample = pd.read_sql_query(f"SELECT * FROM \"{table_name}\" LIMIT 10", conn)
+
+        # Remove the "Picture" column from the sample data if it exists
+        if 'Picture' in sample.columns:
+            sample = sample.drop(columns=['Picture'])
 
         row_count = pd.read_sql_query(f"SELECT COUNT(*) as cnt FROM \"{table_name}\"", conn)['cnt'][0]
 

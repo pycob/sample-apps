@@ -54,7 +54,7 @@ def home(server_request: cob.Request) -> cob.Page:
 
     data['weighted_return'] = data['return'] * data['ticker'].map(tickers_and_weights)
 
-    page.add_pandastable(data.head(), action_buttons=[])
+    page.add_pandastable(data.head())
 
     # Calculate the portfolio volatility
     portfolio_volatility = data.groupby("date")["weighted_return"].std().mean() * 252 ** 0.5
@@ -90,7 +90,7 @@ def home(server_request: cob.Request) -> cob.Page:
     # Join ticker_volatility and total_returns
     return_vs_volatility = total_returns.to_frame("total_return").join(ticker_volatility.to_frame("volatility"))
 
-    page.add_pandastable(return_vs_volatility.reset_index(), action_buttons=[])
+    page.add_pandastable(return_vs_volatility.reset_index())
 
     # Plotly Scatter of the returns vs volatility
     fig = px.scatter(return_vs_volatility.reset_index(), x="volatility", y="total_return", title="Returns vs Volatility", hover_name="ticker")
@@ -99,7 +99,7 @@ def home(server_request: cob.Request) -> cob.Page:
     # Compute the correlation matrix
     correlation_matrix = data.pivot(index="date", columns="ticker", values="return").corr()
 
-    page.add_pandastable(correlation_matrix.reset_index(), action_buttons=[])
+    page.add_pandastable(correlation_matrix.reset_index())
 
     return page
 

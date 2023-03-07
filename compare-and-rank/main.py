@@ -86,14 +86,14 @@ def vs(server_request: cob.Request) -> cob.Page:
     with page.add_container(grid_columns=3) as container:
         with container.add_card() as card:
             card.add_header(str(data1[index_col]))
-            card.add_pandastable(row_to_df(data1), action_buttons=[])
+            card.add_pandastable(row_to_df(data1))
             card.add_link("Select as Winner", f"/vs?winner={data1[index_col]}&loser={data2[index_col]}")
         
         container.add_header("VS", classes="align-self-center text-center")
 
         with container.add_card() as card:
             card.add_header(str(data2[index_col]))
-            card.add_pandastable(row_to_df(data2), action_buttons=[])
+            card.add_pandastable(row_to_df(data2))
             card.add_link("Select as Winner", f"/vs?winner={data1[index_col]}&loser={data2[index_col]}")
     
     page.add_link("See Results", "/results")
@@ -107,11 +107,11 @@ def results(server_request: cob.Request) -> cob.Page:
     rating_df = pd.DataFrame(pd.Series(eloLeague.ratingDict, name="Rating")).sort_values("Rating", ascending=False).reset_index()
     rating_df.columns = ['Player', 'Rating']
 
-    page.add_pandastable(rating_df, action_buttons=[])
+    page.add_pandastable(rating_df)
 
     page.add_header("Games")
     games_df = pd.DataFrame(games)
-    page.add_pandastable(games_df, action_buttons=[])
+    page.add_pandastable(games_df)
 
     return page
     

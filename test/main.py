@@ -17,13 +17,13 @@ df = px.data.gapminder().query("country=='Canada'")""")
     df = px.data.gapminder().query("country=='Canada'")
 
     page.add_text("Now we can add the data frame to the page as a native table:")
-    page.add_code("""page.add_pandastable(df, action_buttons=[])""")
+    page.add_code("""page.add_pandastable(df)""")
 
-    page.add_pandastable(df, action_buttons=[])
+    page.add_pandastable(df)
 
     page.add_text("Or we can add the data frame to the page as a datagrid:")
-    page.add_code("""page.add_datagrid(df, action_buttons=[])""")
-    page.add_datagrid(df, action_buttons=[])
+    page.add_code("""page.add_datagrid(df)""")
+    page.add_datagrid(df)
 
 
     page.add_text("Or we can add the data frame to the page as a plotly figure:")

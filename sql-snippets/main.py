@@ -156,7 +156,7 @@ def view_snippet(server_request: cob.Request) -> cob.Page:
     with page.add_card() as card:
         # Put the data into a dataframe, excluding the query
         df = pd.DataFrame(pd.Series(data, name="Fields")).reset_index().query("index != 'Query'")
-        card.add_pandastable(df, action_buttons=[])
+        card.add_pandastable(df)
 
     page.add_codeeditor(data["Query"], "sql")
 
@@ -183,7 +183,7 @@ def view_snippet(server_request: cob.Request) -> cob.Page:
     try:
         df = server_request.app.from_cloud_pickle(f"{id}.pkl")
         page.add_header("Cached Results")
-        page.add_datagrid(df, action_buttons=[])
+        page.add_datagrid(df)
     except:
         page.add_text("No cached results found. Run the SQL to see the results.")
 
@@ -201,7 +201,7 @@ def run_snippet(server_request: cob.Request) -> cob.Page:
 
     server_request.app.to_cloud_pickle(df, f"{id}.pkl")
 
-    page.add_datagrid(df, action_buttons=[])
+    page.add_datagrid(df)
 
     data = server_request.retrieve_dict(table_id="snippet", object_id=id)
 

@@ -24,7 +24,7 @@ def home(server_request: cob.Request) -> cob.Page:
 
     if rows == '':
         page.add_header("Sample Data", size=2)
-        page.add_pandastable(df.head(5), action_buttons=[])
+        page.add_pandastable(df.head(5))
 
     with page.add_card() as card:
         card.add_header('Pivot Options')
@@ -48,8 +48,8 @@ def home(server_request: cob.Request) -> cob.Page:
     page.add_plotlyfigure(px.bar(pivot.reset_index(), x=rows, y=values, color=values))
 
     # Pandas table of pivot
-    page.add_code(f"page.add_pandastable(pivot.reset_index(), action_buttons=[])", header="Pandas Table")
-    page.add_pandastable(pivot.reset_index(), action_buttons=[])
+    page.add_code(f"page.add_pandastable(pivot.reset_index())", header="Pandas Table")
+    page.add_pandastable(pivot.reset_index())
 
     return page
 
