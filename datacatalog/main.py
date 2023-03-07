@@ -54,7 +54,8 @@ class Dataset:
             row['table_name'] = table.name
             row['table_readable_name'] = table.readable_name
             row['table_description'] = table.description
-            row['table_last_updated'] = table.last_updated
+            row['row_count'] = table.row_count
+            row['table_last_updated'] = table.last_updated.strftime("%Y-%m-%d %H:%M")
             row['table_type'] = table.type
             
             records.append(row)
@@ -73,10 +74,11 @@ class Table:
     name: str
     readable_name: str
     description: str
-    last_updated: str
+    last_updated: datetime
     type: str
     columns: list[Column]
     sample: pd.DataFrame
+    row_count: int
 
     def to_dataframe(self) -> pd.DataFrame:
         records = []
@@ -183,12 +185,11 @@ def tables(server_request: cob.Request) -> cob.Page:
         return page
 
     action_buttons = [
-        cob.Rowaction(label="Edit", url="/edit?dataset_name={dataset_name}&table_name={table_name}", open_in_new_window=False),
         cob.Rowaction(label="View", url="/table_detail?dataset_name={dataset_name}&table_name={table_name}", open_in_new_window=False),
     ]
 
     
-    page.add_pandastable(dsets.to_dataframe(), action_buttons=action_buttons)
+    page.add_datagrid(dsets.to_dataframe(), action_buttons=action_buttons)
     
     return page
     
@@ -202,6 +203,11 @@ def table_detail(server_request: cob.Request) -> cob.Page:
         return page
     
     page.add_header(f'Table Detail: {dataset_name} - {table_name}')
+
+    with page.add_form(action="/edit") as form:
+        form.add_formhidden("dataset_name", dataset_name)
+        form.add_formhidden("table_name", table_name)
+        form.add_formsubmit("Edit")
 
     dataset_index = dsets.get_dataset_index(dataset_name)
 
@@ -217,15 +223,16 @@ def table_detail(server_request: cob.Request) -> cob.Page:
         page.add_alert("Table not found", "Error", "red")
         return page
 
+    table_df = dset.to_dataframe().iloc[table_index,:].reset_index()
     table = dset.tables[table_index]
 
-    page.add_header(f"Description:", size=2)
-    page.add_text(table.description if table.description != "" else "No description")
-    page.add_header(f"Last Updated:", size=2)
-    page.add_text(f"{table.last_updated if table.last_updated != '' else 'No last updated date'}")
-    page.add_header(f"Type:", size=2)
-    page.add_text(f"{table.type if table.type != '' else 'No type'}")
+    table_df.columns = ["Field", "Value"]
+    # Make the field names more readable
+    table_df['Field'] = table_df['Field'].map(lambda x: x.replace("_", " ").title())
 
+    page.add_pandastable(table_df, action_buttons=[])
+
+    page.add_header("Columns", size=2)
     page.add_pandastable(table.to_dataframe(), action_buttons=[])
 
     page.add_header("Sample Data", size=2)
@@ -327,7 +334,10 @@ def refresh(server_request: cob.Request) -> cob.Page:
         page.add_pandastable(columns, action_buttons=[])
         
         sample = pd.read_sql_query(f"SELECT * FROM \"{table_name}\" LIMIT 10", conn)
-        table = Table(name=table_name, readable_name=to_readable_name(table_name), description='', last_updated=datetime.now(), type='', columns=[], sample=sample)
+
+        row_count = pd.read_sql_query(f"SELECT COUNT(*) as cnt FROM \"{table_name}\"", conn)['cnt'][0]
+
+        table = Table(name=table_name, readable_name=to_readable_name(table_name), description='', last_updated=datetime.now(), type='', columns=[], sample=sample, row_count=row_count)
 
         # Get column metadata
         for label, col in columns.iterrows():
@@ -336,6 +346,7 @@ def refresh(server_request: cob.Request) -> cob.Page:
 
             try:
                 stats = stats_df.iloc[0].to_dict()
+
                 column = Column(name=col['name'], readable_name=to_readable_name(col['name']), description='', data_type=col['type'], nullable='Nullable' if col['notnull']==0 else 'Not Nullable', min=stats['min'], max=stats['max'], mean=stats['mean'], num_distinct=stats['num_distinct'], num_null=stats['num_null'], num_rows=stats['num_rows'])
             except:
                 column = Column(name=col['name'], readable_name=to_readable_name(col['name']), description='', data_type=col['type'], nullable='Nullable' if col['notnull']==0 else 'Not Nullable', min=None, max=None, mean=None, num_distinct=None, num_null=None, num_rows=None)
