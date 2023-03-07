@@ -1,0 +1,6 @@
+pycob
+pandas
+plotly
+snowflake-connector-python
+snowflake-connector-python[pandas]
+gunicorn
