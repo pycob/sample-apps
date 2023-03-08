@@ -332,8 +332,9 @@ def refresh(server_request: cob.Request) -> cob.Page:
         # Get columns
         columns = pd.read_sql_query(f"PRAGMA table_info('{table_name}')", conn)
         
-        # Remove the "Picture" column from the sample data
+        # Remove the "Picture" or "Photo" column from the sample data
         columns = columns[columns['name'] != 'Picture']
+        columns = columns[columns['name'] != 'Photo']
 
         page.add_pandastable(columns)
         
@@ -342,6 +343,8 @@ def refresh(server_request: cob.Request) -> cob.Page:
         # Remove the "Picture" column from the sample data if it exists
         if 'Picture' in sample.columns:
             sample = sample.drop(columns=['Picture'])
+        if 'Photo' in sample.columns:
+            sample = sample.drop(columns=['Photo'])
 
         row_count = pd.read_sql_query(f"SELECT COUNT(*) as cnt FROM \"{table_name}\"", conn)['cnt'][0]
 
