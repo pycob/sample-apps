@@ -149,7 +149,9 @@ def home(server_request: cob.Request) -> cob.Page:
         plots2.add_plotlyfigure(fig4)
 
     with page.add_card() as card:
-        card.add_header("Add Ticker")
+        card.add_header("Portfolio Tickers and Weights")
+        card.add_pandastable(pd.Series(tickers_and_weights).to_frame("weights").reset_index(names="tickers"))
+        card.add_header("Add Ticker", size=3)
         card.add_text("The rest of the portfolio will be rebalanced to maintain the relative weights.")
         with card.add_form() as form:
             form.add_formtext("Ticker", "ticker", "AAPL")
