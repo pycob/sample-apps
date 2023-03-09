@@ -84,7 +84,7 @@ def home(server_request: cob.Request) -> cob.Page:
     ticker = server_request.params("ticker")
     weight = server_request.params("weight")
 
-    if ticker is not None and weight is not None:
+    if ticker != "" and weight != "":
         # Update the tickers and weights
         tickers_and_weights = update_tickers_and_weights(initial_tickers_and_weights, ticker, float(weight))
     else:
