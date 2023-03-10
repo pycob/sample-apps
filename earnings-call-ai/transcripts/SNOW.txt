@@ -1,0 +1,675 @@
+SNOW earnings call for the period ending December 31, 2022.
+
+Snowflake (SNOW -5.07%)
+Q4 2023 Earnings Call
+Mar 01, 2023, 5:00 p.m. ET
+
+Contents:
+Prepared Remarks
+Questions and Answers
+Call Participants
+Prepared Remarks:
+
+Operator
+
+Hello, and welcome to the Q4 FY '23 Snowflake earnings conference call. My name is Elliot, and I will be coordinating your call today. [Operator instructions] I would now like to hand over to Jimmy Sexton, head of investor relations. The floor is yours.
+
+Please go ahead.
+
+Jimmy Sexton -- Head of Investor Relations
+
+
+Good afternoon, and thank you for joining us on Snowflake's Q4 fiscal 2023 earnings call. With me in Bozeman, Montana are Frank Slootman, our chairman and chief executive officer; Mike Scarpelli, our chief financial officer; and Christian Kleinerman, our senior vice president of product, who will join us for the Q&A session. During today's call, we will review our financial guidance for the fourth quarter and full-year fiscal 2024 and our results of the first quarter and full year fiscal 2023. During today's call, we will make forward-looking statements, including statements related to the expected performance of our business, future financial results, strategy, products and features, long-term growth, our stock repurchase program, and overall future prospects.
+
+These statements are subject to risks and uncertainties, which could cause them to differ materially from actual results. Information concerning those risks is available in our earnings press release distributed after market close today and our SEC filings, including our most recently filed Form 10-Q and the Form 10-K for the fiscal year ended January 31, 2023, that we will file with the SEC. We caution you to not place undue reliance on forward-looking statements and undertake no duty or obligation to update any forward-looking statements as a result of new information, future events, or changes in our expectations. We'd also like to point out that on today's call, we will report both GAAP and non-GAAP results.
+
+We use these non-GAAP financial measures internally for financial and operational decision-making purposes and as a means to evaluate period-to-period comparisons. Non-GAAP financial measures are presented in addition to and not as a substitute for financial measures calculated in accordance with GAAP. To see the reconciliations of these non-GAAP financial measures, please refer to our earnings press release distributed earlier today in our investor presentation, which are posted at investors.snowflake.com. A replay of today's call will also be posted on the website.
+
+With that, I would now like to turn the call over to Frank.
+
+
+Frank Slootman -- Chairman and Chief Executive Officer
+
+Thanks, Jimmy. Good afternoon, everybody on the call. Q4 product revenue grew 54% year on year, and for the fiscal year grew 70%, totaling $1.9 billion. Q4 net revenue retention was 158%.
+
+We continue to be on track for our $10 billion product revenue goal in fiscal '29. Remaining performance obligations grew 38% totaling $3.7 billion. We saw a measure of bookings reticence with certain customer segments in Q4, reflecting a lack of visibility in the business and preferring a cautious short-term stance versus larger, longer-term contract expansions. The contractual posture focused on sufficiently enabling consumption growth in the near term.
+
+This was more pronounced among international, SMB, and commercial customers, and much less so at the high end of our customer base. We made substantial progress on our efficiency metrics. Non-GAAP operating margin for the quarter reached 6%. Non-GAAP adjusted free cash flow margin for the quarter was 37%.
+
+
+For the full fiscal year '23, non-GAAP adjusted free cash flow margin was 25%, totaling $520 million. But our data networking growth as measured by so-called stable edges grew 93% year over year. 23% of our customers now have at least one stable edge, up from 18% a year ago. Among $1 million consumption customers, 65% of them had, on average, six stable edges.
+
+Snowflake's marketplace listings grew 8% quarter over quarter and now total over 1,800. During Q4, Snowpark for Python reached general availability status. Early traction is promising. 20% of customers have now tried Snowpark.
+
+Snowpark is initially focused on the adoption and migration of Spark workloads for data engineering and machine learning. Spark jobs typically run cheaper and faster on Snowpark with the added benefits of superior governance and operational simplicity. POC activity is ramping fast, and benchmark results so far indicate superior comparative results. A Fortune 500 customer loads 1 billion transaction records into Snowflake every day.
+
+This organization saved $1 million after migrating work from Spark to Snowpark. A financial services customer is migrating workloads from Spark to Snowpark Snowflake and Snowpark ran 8x faster at 30% of the cost. We entered private preview status with what we call Streamlit in Snowflake. This is the replatforming of Streamlit inside of Snowflake.
+
+Streamlit is a popular application development framework for the Python developer community, especially those focused on machine learning applications. Streamlit enables the use of machine learning models and applications by a general business audience. In Q4, we announced our intent to acquire Mobilize.Net's SnowConvert. SnowConvert's proprietary conversion tools enable migration from legacy platforms.
+
+SnowConvert also helps migrate Spark workloads to Snowpark. Its capabilities accelerate migration to Snowflake, hence the strategic nature of this acquisition. We are operating in a vast and growing market, generating free cash flow and maintaining a strong balance sheet. We focus on the business at hand and the outcomes we can control.
+
+We are prioritizing positions that directly support the core mission of the enterprise. Resources will continue to be concentrated on the roles that sell, support, and build our products. With that, I'll turn the call over to Mike.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Thank you, Frank. Q4 product revenues were $555 million, representing 54% year-over-year growth, and remaining performance obligations grew 38% year over year, totaling $3.7 billion. Of the $3.7 billion in RPO, we expect approximately 55% to be recognized as revenue in the next 12 months. This represents a 48% increase compared to our estimate as of the same quarter last year.
+
+Our net revenue retention rate of 158% includes 13 new customers with $1 million in trailing 12-month product revenue and reflects durable growth among our largest customers. The outperformance in Q4 was driven by longest-tenured customers. We continue to see the greatest contribution from the financial services and media and entertainment verticals. We continue to focus on growth and efficiency.
+
+We generated $215 million in non-GAAP adjusted free cash flow, outperforming our Q4 target. Full-year fiscal 2023 non-GAAP adjusted free cash flow margin was 25%. Q4 bookings underperformed versus our expectations. Pipeline conversion in the final two weeks of the quarter diverged from historical norms.
+
+International territories drove the largest underperformance relative to plan, and multiyear bookings declined 15% year on year. While we are not OK with this outcome, customers' bookings behavior does not dictate their consumption patterns. Customers have the contractual right to sign smaller deals to bridge them to their contract end date. We are confident that our customers are committed to Snowflake and are increasingly focused on better managing their business during more uncertain times.
+
+Q4 represented another quarter of continued progress on profitability. Our non-GAAP product gross margin was 75%. Scale in our public cloud data centers, continued growth in large customer accounts, and more favorable pricing with our cloud service providers will contribute to year-over-year gross margin improvements. Non-GAAP operating margin was 6%, benefiting from revenue outperformance and savings on T&E and lower bad debt expense.
+
+Our non-GAAP adjusted free cash flow margin was 37%, positively impacted by strong collections. We received some large customer payments in January that were expected in February. We ended the quarter in a strong cash position, with $5.1 billion in cash, cash equivalents, and short-term and long-term investments with no debt. As noted in the press release that went out earlier today, we have expanded our partnership with AWS over the next five years, more than doubling our previous spend commitment to $2.5 billion.
+
+As part of the new AWS -- as part of the new agreement, AWS is committing to support joint go-to-market efforts, more favorable pricing. This partnership is aimed at driving growth in innovation. Now, let's turn to our guidance. As of today, we have completed the Graviton2 migration in all of our active commercial AWS deployments.
+
+We remain committed to driving toward greater profitability. We are focused on growing revenue while expanding operating and free cash flow margins. The change in existing customer purchasing behavior, lower-than-expected new logo bookings, and slower expected ramp from our youngest cohorts has led us to reevaluate our FY '24 outlook. For the first quarter, we expect product revenues between $568 million and $573 million, representing year-over-year growth between 44% and 45%.
+
+Turning to margins. We expect, on a non-GAAP basis, 0% operating margin, and we expect 361 million diluted weighted average shares outstanding. For the full year fiscal 2024, we expect product revenues of approximately $2.7 billion representing year-over-year growth of approximately 40%. Turning to profitability for the full year fiscal 2024, we expect, on a non-GAAP basis, approximately 76% product gross margin, 6% operating margin, and 25% adjusted free cash flow margin, and we expect 363 million diluted weighted average shares outstanding.
+
+I would also like to announce that our board of directors has authorized a stock repurchase program of up to $2 billion over the next two years. This program reflects our conviction in the business and allows us to use our expected free cash flow to manage dilution over this period. Our share count guidance does not include the impact from the stock repurchase. During fiscal 2023, we added approximately 1,900 net new employees.
+
+We view the current hiring market as favorable for Snowflake, and we'll continue to prioritize hiring in product, engineering, and sales. We expect to add more than 1,000 employees in fiscal 2024. We remain on track to achieve our fiscal 2029, $10 billion product revenue target. We look forward to executing against our growing opportunity.
+
+And lastly, we will host our Investor Day on June 27 in Las Vegas in conjunction with Snowflake Summit, our annual users' conference. If you're interested in attending, please email ir@snowflake.com. With that, operator, you can now open up the line for questions.
+
+Questions & Answers:
+
+Operator
+
+Thank you. [Operator instructions] Our first question today comes from Mark Murphy from JPMorgan. The line is open.
+
+Mark Murphy -- JPMorgan Chase and Company -- Analyst
+
+Thank you very much. Mike, I'm curious if you have any insights into the consumption patterns that you saw generally, but including during the holiday periods, including MLK weekend and President's Day week. Is there anything -- any noteworthy change there? And then I have a quick follow-up.
+
+Mike Scarpelli -- Chief Financial Officer
+
+You know, there was nothing really noteworthy around the holidays. As we said going into our Q4 guidance, we were factoring in the holidays. And clearly, we were 3% above our guidance. our actual results.
+
+And I will say President's Day was slow, but February is off to a very good start. It's kind of where we were expecting it to be.
+
+Mark Murphy -- JPMorgan Chase and Company -- Analyst
+
+OK. As a follow-up, Frank, I wanted to ask you on the topic of generative AI and large language models. Can you frame up the opportunity there for Snowflake? Because I would think with the Unistore, you could probably handle all these chat logs. You could be training some of these models on very large data sets.
+
+I would think that Snowpipe can pull in social media feeds and kind of help to improve those models. You see any customer activity around that vector or any tailwinds you think that could be developing in time?
+
+Frank Slootman -- Chairman and Chief Executive Officer
+
+Well, you know, it's still early in the cycle. Obviously, like everybody else, we're all over it in terms of evaluating where these technologies can make a difference. I mean, the things that we sort of hone in on short term is called completion code optimizations, things that are very, very clear business returns. One of the challenges with this new technology is that people come up with a lot of interesting questions, but without a solid business model, that's not going to take off.
+
+So, we take a very pragmatic view. We do anticipate that Snowflake data will be a very, very big driver of large language model in conjunction with many, many other data sources. So, we think that the gravity around data will drive a lot of this action activity to our platform.
+
+Mark Murphy -- JPMorgan Chase and Company -- Analyst
+
+Excellent. Thank you very much.
+
+Operator
+
+We now turn to Kirk Materne from Evercore ISI. Your line is open.
+
+Kirk Materne -- Evercore ISI -- Analyst
+
+Yeah. Thanks for taking the question. Congrats on a good quarter. Mike, can you just talk about the international sort of underperformance, actually a really good quarter.
+
+Is there something just specific about the region in terms of how people are consuming over there versus the U.S.? Or is this just a maturation of your sales organization that needs to continue over in that region?
+
+Mike Scarpelli -- Chief Financial Officer
+
+I think it's customers being a little more cautious in their business and just buying as they consume, which they can do under their contracts as well, too. We've always seen that in Japan, in particular. Those customers tend to do that. But I would say part is also our own execution as well, too, which we're working on.
+
+So, yes, I will say we did see as well in North America, a number of customers, some of our larger customers, who had consumed their full contract amount but still had a contract in place and just bridged themselves rather than do big deals right now. And I think that's just a function of uncertainty in their business, but their consumption still continues to grow on stuff like it.
+
+Kirk Materne -- Evercore ISI -- Analyst
+
+And just one quick one for Frank. Frank, on the telecom cloud that you guys have announced. I was just kind of curious your thoughts there, how fast do you think that could ramp? Obviously, the financial services and some of the other verticals that you focused on been really strong, to your point around some of the shared edges that you've seen in your bigger customers. Just any thoughts on how fast that could ramp for you guys?
+
+Frank Slootman -- Chairman and Chief Executive Officer
+
+Telco is a really important segment for us. I mean, our largest customers -- some of our largest customers are in that segment. They're running massive amounts of data, very focused on managing the service experience, cross-selling across very, very large customer bases. This is our fifth industry cloud that we have announced, and it's really focused on bringing telco-specific data sets, data assets to it, data practices, applications, and then really bring in that ecosystem of telcos people that interact with each other who have the opportunity to have the benefit of a data network like Snowflake.
+
+So, we're very high on -- I mean, obviously, telcos are the cornerstone of every modern economy, and especially in a lot of secondary markets. I mean, telcos tend to be the biggest consumers for us.
+
+Kirk Materne -- Evercore ISI -- Analyst
+
+Thank you.
+
+Operator
+
+Our next question comes from Brent Thill from Jefferies. Your line is open.
+
+Brent Thill -- Jefferies -- Analyst
+
+Thanks. Just as it relates to the overall guide, can you just give us a little more color, kind of what you baked in, Mike, and ultimately, perhaps kind of what's been the big change from your perspective?
+
+Mike Scarpelli -- Chief Financial Officer
+
+You know, the big change is really the -- we're seeing the younger cohorts that are coming into Snowflake are really ramping at a slower pace than what some of the early adopters of Snowflake did. They're still consuming. These tend to be large organizations as we've been focused on those large G2Ks, and they just move slowly, but they're still ramping their consumption just at a lower rate. And I think Snowflake is being deployed more efficiently for these customers.
+
+And I also just think too, as our base gets bigger, that growth naturally slows down in the business, but customers are still consuming.
+
+Brent Thill -- Jefferies -- Analyst
+
+And just from a rep productivity perspective, Mike, is there anything changing there where you're seeing the reps' productivity slow? Or is that consistent to what you've seen historically?
+
+Mike Scarpelli -- Chief Financial Officer
+
+I would say we have a rep productivity issue in some of the international markets, and we are slowing down some of our hiring where we don't see the productivity, but there's other areas where productivity is doing well. The large enterprises is definitely doing well for us. North American enterprise continues to be strong for us, and we're going to deploy resources where we think we can get those reps productive over the next 12 months.
+
+Brent Thill -- Jefferies -- Analyst
+
+Great. Thanks for the call.
+
+Operator
+
+We now turn to Keith Weiss from Morgan Stanley. Your line is open.
+
+Theo Thun -- Morgan Stanley -- Analyst
+
+Great. This is Theo Thun on for Keith. You put up 158% net retention this quarter. which is still an impressive number but slowing sequentially.
+
+I would love to understand what you're seeing between the different customer cohorts in terms of expansion momentum but also maybe optimization and how that sort of changed over the last 90 days. Any way you could sort of parse that out between 1 million-plus customers and then the rest of your customers?
+
+Mike Scarpelli -- Chief Financial Officer
+
+First of all, the 158% was the exact net revenue retention, just as a reminder, when we went public. And I think there was a little bit of a reacceleration in our business and 2021, 2022, where there's a lot of customers that maybe had spending out of control. Now, that costs are a much bigger focus within almost every company today, I think people are using Snowflake more efficiently. Customers are having very detailed, methodical deployment plans on Snowflake, which is slowing down that growth rate of customers' consumption as they're going through their implementations.
+
+But we're not seeing any customers decrease their spend in any material way in Snowflake. Yes, we still had those three we pointed out at the beginning of last year that a few of those have dropped out of our top 10, but those guys have stabilized. But in general, most of our customers continue to grow with us, albeit at a slower pace. And I think that's more of a nature of controlling costs.
+
+Theo Thun -- Morgan Stanley -- Analyst
+
+OK. Great. Got it. And then just quickly on your verticalization.
+
+I mean, clearly, that's a big focus for you. And I think the AWS partnership expansion sort of reiterates that effort. Any way you can sort of explain what you're seeing in different verticals? Are there any that slowed that are stabilizing now? Any that might be accelerating and sort of how you're thinking about different verticals when it comes to your fiscal year '24 guide?
+
+Mike Scarpelli -- Chief Financial Officer
+
+Well, I would say, as I mentioned in my remarks and I've said before, financial services is definitely our biggest vertical. That's where we have the most data sharing going on. Next is media and technology and entertainment. That's a huge segment for us.
+
+Clearly some of the newer technology companies, we've seen a slowdown in some of those ones which we had highlighted last year. And I do think you're definitely going to see a slowdown in a lot of the venture-backed companies that may have been growing very quickly. We're definitely seeing cost controls in those companies as well, but the large Global 2000 continue to grow.
+
+Operator
+
+Our next question comes from Raimo Lenschow from Barclays. Your line is open.
+
+Shel McMeans -- Barclays -- Analyst
+
+Hi. This is Shel McMeans on for Raimo. Thanks for taking our questions. You've recently discussed the top 15 GSIs have done around $1.4 billion in services spend around Snowflake, and that was year to date as of Q3.
+
+I was wondering if we could get an update on that. And then how should we think about the attach to those service -- the attach of future consumption onto those services? Is there any framework we can think about to help inform next year's revenue expectations? For example, is there a correlation between the growth rates? Or can we think about the magnitude of that GSI spend with some sort of lag? Thank you.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Yeah. I'll just say in the top 15 GSIs, the spend in deals they've booked is over $1.6 billion last year based upon the data that my alliances team is reporting. In terms of trying to get any concrete relationship between their spend and Snowflake revenue, I really don't have that data. And I would be guessing anecdotally looking at specific customers, so I'm not going to guide toward that.
+
+But it's generally a number of times bigger than what the revenue is associated with it in Year 1.
+
+Shel McMeans -- Barclays -- Analyst
+
+Got it. And a quick follow-up. How should we think about the relationship between operating margin and free cash flow margin going forward? Particularly when considering the increasing S&M leverage you guys are getting on larger accounts and the greater role of expansion revenue versus net new that may affect commissions. And then you mentioned there was some lower bookings duration, and I was wondering if billings duration played into that as well.
+
+Mike Scarpelli -- Chief Financial Officer
+
+First of all, I don't even look at billings because in our model, people are just buying capacity and that capacity may be for three months, it could be for one month, or could be for one year, and it really varies by customer, and they have the right to do that. In terms of relationship between operating margin and free cash flow, well definitely as your operating margin expands, I expect our free cash flow to expand. But the operating margin will expand at a more rapid pace given it's a much lower number, and we will update the longer-term model as part of our Investor Day in June. We clearly just guided to 6% non-GAAP operating margin and 25% adjusted free cash flow for the full year this year.
+
+Shel McMeans -- Barclays -- Analyst
+
+Got it. Thanks.
+
+Operator
+
+We now turn to Gregg Moskowitz from Mizuho. Your line is open.
+
+Gregg Moskowitz -- Mizuho Securities -- Analyst
+
+OK. Thank you for taking the question. Mike, you mentioned that weaker net new bookings and the slower-than-expected ramp from your youngest cohorts impacted the fiscal '24 guide. But thinking back to the Q3 call, you had also spoken about some significant customers that you were expecting to materially ramp in fiscal '24, and you also said today that the enterprise has generally held up pretty well.
+
+So, I'm wondering, three months later, maybe looking at it from a bottoms-up perspective, can you share with us how you're thinking about these particular customers and the ones that there was this potential line of sight in terms of them ramping in fiscal '24? Just wondering if that's changed at all in terms of that viewpoint. Thanks.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Well, those customers are definitely still ramping. But what I will say, what is different in literally week 10 of our quarter, we converted 90% of our weighted pipeline into bookings where historically, that's been 140% in Q4, and that's typically because deals are understated, and deals get pulled in. That did not happen this quarter. We also had a number of customers, big customers, who rather than they consumed everything and rather than do a big multiyear deal, literally just bought enough capacity to get them through to the next quarter or two.
+
+I do have two of my biggest customers. I know they run out of capacity within the next six months, that they will have to do something. But once again, they could do big deals, or they could just do -- buy a sufficient capacity on a quarterly basis because their contracts still haven't expired. They just don't have any capacity left on them.
+
+So, that's why I don't focus too much on bookings and focus more on revenue, and why I think that's the leading indicator. But as I said, we definitely do see a number of our newer customers in the cohort still ramping, but ramping at a slower pace than what historically they have. And I think that is a function of the cost controls that are going on within companies to make sure they are conserving as much money as they can from an expense standpoint.
+
+Gregg Moskowitz -- Mizuho Securities -- Analyst
+
+Very helpful. And then just for -- thanks, Mike. For Frank, on Snowpark for Python. So, we've heard of a lot of customers that are kicking the tires, a lot of small tests that are taking place, but you did call out a couple of customers that are really ramping, and it sounds like there's a lot of robust POC activity.
+
+Just be helpful to get a little bit more insight in terms of how you're thinking about how this plays out over the course of fiscal '24 in terms of adoption. Thank you.
+
+Frank Slootman -- Chairman and Chief Executive Officer
+
+Well, we definitely have sort of unleashed a full-court press because our basic posture is that, for example, any Spark job that runs in the Snowflake orbit, either putting data into Snowflake or taking data out of Snowflake for consumption, analytics, machine learning purposes is really ours. That's sort of the attitude that we take toward it, and we will challenge existing Spark jobs, and we will compete hard for any new ones. So, we are really taking ownership for the action activity that is happening in our hemisphere, so to speak. So, it is all over the map.
+
+We can see very clearly from our own data, which customers are doing what because they're touching Snowflake. So, we really mobilized ourselves as an organization to target that, and you clearly seem to have picked up on a lot of the activity. It's a huge amount of stuff, and I feel it's really rolling out in ways, and there is a lot of POC activity going on there. These customers want to see whether we can verify some of the outcomes that we're anticipating.
+
+And so far, those results have been super encouraging, and our sales force is pretty good about the opportunity based on the results that we're seeing. So, we're quite excited about it. This is really -- the really biggest expansion, if you will, of our scope as a company since we first came out in 2015 time frame when we went after Hadoop workloads and things of that sort.
+
+Gregg Moskowitz -- Mizuho Securities -- Analyst
+
+Great. Thanks very much.
+
+Operator
+
+We'll now turn to Derrick Wood from Cowen. Your line is open. 
+
+Derrick Wood -- Cowen and Company -- Analyst
+
+Great. Thanks. Frank, legacy migrations from on-premise have been a key growth driver for new customers for you guys. Is the macro causing any change in urgency for those kinds of migration projects? And given that you guys acquired SnowConvert, can you talk about how that may help simplify or accelerate migration projects?
+
+Frank Slootman -- Chairman and Chief Executive Officer
+
+Well, you know, on SnowConvert, I mean, we've been working with that technology for years and years. We're super familiar with it. And we're actually really happy that we now have full control over that technology because it's not just about migrating customers, it's also getting them to consumption faster, which is why it matters to our model. Not really seeing slowdown on migrations.
+
+I mean, all of Mike's comments so far is really about all the customers who are continuing to do contract extensions. They just have a more reticent posture. In the past, it was all about enabling growth as hard and as fast as they could because that was the dynamic of the times. Now we're sort of in the opposite dynamic where they're looking to not get too far over their skis, and they're enabling the growth they are foreseeing and they're going a few steps at a time.
+
+But migrations are -- keep on coming, you know, fast and furious.
+
+Derrick Wood -- Cowen and Company -- Analyst
+
+Great. Mike, given all the headcount cuts happening in the tech sector, is that having any material impact to your assumptions around consumption activity? And you did allude to kind of the start-up tech seeing pressure. Any -- can you give us a sense for how much revenue exposure you have there?
+
+Mike Scarpelli -- Chief Financial Officer
+
+Yeah. Well, first of all, when I make the comment about companies are definitely looking to save on their spend. When you're doing a RIF, you're generally not just looking at reducing costs and headcount, you're also looking at other areas of your business you can reduce costs. So, I definitely think in some customers, you can see one that publicly announced risks.
+
+We've seen some real slowdown in the revenue. Yet others -- I can't name their names, but there's another one that announced a RIF in one of our top 10 customers. Their consumption has actually gone up in Snowflake, so there's no direct correlation between RIFs and a customer's consumption in Snowflake. But I will say CFOs and companies are definitely looking for ways to cut costs and either through headcount or other things.
+
+Operator
+
+We now turn to Alex Zukin from Wolfe Research. Your line is open.
+
+Allan Verkhovski -- Wolfe Research -- Analyst
+
+Hey, guys. This is Allan Verkhovski on for Alex Zukin. Thank you for taking the question. Just one quick one for me.
+
+For your 40% product growth guide in fiscal '24, how should we think about the seasonality through the year? And perhaps how has that changed relative to your view last quarter after now seeing slower ramp times with your more recent adopters of the platform?
+
+Mike Scarpelli -- Chief Financial Officer
+
+Well, as I said, the more recent adopters of the platform, we'll definitely see them ramping slower. They're taking longer in terms of they're not growing euphorically like some of the earlier ones. And I really do think that is a factor of -- it could be the macro that they want to conserve. It could be that they're depending on the customer, that they're being more efficient in how they roll Snowflake out as there's a bigger population of people who have been using Snowflake in the market.
+
+And it's also a factor that a lot of the new customers that we're signing up aren't necessarily these venture-backed start-ups that have unlimited capital. They tend to be more of these mature companies that have always been disciplined on their spending. So, it really does vary. In terms of seasonality, we just guided -- for the quarter, you can see what we guided.
+
+We guided 44% to 45% growth in Q1 and guided 40% to the year. I'm not going to give you the quarterly guidance for the other quarters because we'll give you Q2 after Q1 is finished as we've always done.
+
+Allan Verkhovski -- Wolfe Research -- Analyst
+
+Thank you.
+
+Operator
+
+Now turning to Sterling Auty from SVB. Your line is open.
+
+Sterling Auty -- SVB Securities -- Analyst
+
+Yeah. Thanks. Mike, you gave a couple of reasons for the slower growth in newer customers, but I'm also wondering, are new customers reducing the number of use cases initially? And if so, what are the use cases that you see them ramping with first? And what things maybe are they putting on hold?
+
+Mike Scarpelli -- Chief Financial Officer
+
+There is no reduction in use cases. The use cases continue to expand. What are the most common use cases? It really depends. Migrations are a big one, and on-prem, but it's an on-prem data warehouse, a lot of them.
+
+Some of them, though, are still -- we're still replacing some of those first-generation cloud data warehouses. Think Redshift and things like that. I really haven't seen any slowdown in use cases. The average deal sizes remain relatively the same.
+
+Hasn't changed.
+
+Sterling Auty -- SVB Securities -- Analyst
+
+Make sense. Thank you.
+
+Operator
+
+We'll now turn to Kamil Mielczarek from William Blair. Your line is open.
+
+Kamil Mielczarek -- William Blair and Company -- Analyst
+
+Hi. Thanks for taking my question. Your free cash flow margin reached your long-term target of 25%. Can you provide a little more color around how you think about that shorter-term cash flow decision to balance margin and revenue growth? And assuming the macro environment improves either later this year or in fiscal '25, how do you think about bringing down margins to reaccelerate revenue?
+
+Mike Scarpelli -- Chief Financial Officer
+
+Free cash flow margin is not directly related to our growth. Our growth is more on the expense side and looking at productivity, and we'll not grow our revenue faster unless we see productivity increase in the sales organization. And when we see that increase in productivity, we'll add more heads there. And we think we're adding at the appropriate pace based on what we're seeing in the business today.
+
+As I said, where most companies are cutting, we added 1,900 people last year, net, and we will add over 1,000 people this year while still generating improvement in operating margin and having very good free cash flow next year again.
+
+Kamil Mielczarek -- William Blair and Company -- Analyst
+
+That's helpful. And a quick follow-up. I realize it's still early, but can you provide some detail around the traction you're seeing with the Unistore product and how you expect that piece of the platform to evolve for the next few years?
+
+Christian Kleinerman -- Senior Vice President, Product
+
+Yes. This is Christian. It is, as you say, still very early on. We're still in private preview with tens of customers validating and providing us feedback.
+
+We received quite positive feedback and encouragement, but it's early for us to have any meaningful rollout for adoption.
+
+Kamil Mielczarek -- William Blair and Company -- Analyst
+
+Thank you.
+
+Operator
+
+We now turn to Fred Lee from Credit Suisse. Your line is open.
+
+Fred Lee -- Credit Suisse -- Analyst
+
+Gentlemen, thank you very much for taking my question. You've both been very clear about managing the business for the long term. And considering this operating philosophy, what's the thinking behind the $2 billion share buyback versus pouring more gas into the company's R&D engine and doubling down on products? Thank you.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Yeah. Fred, it's Mike. We have $5.1 billion in cash on our balance sheet. We've had $5 billion since the time we went public.
+
+We've made a number of strategic acquisition and M&A deals. So, we feel we have more than enough capital in the business to fuel our growth through both the small tuck-in M&As, as well as invest in headcount, but you can only add so many people at a time and get them productive in an engineering organization. And I'm not hearing our engineering leaders claim they need more people. And it's not growth at all costs, this company.
+
+Yes, we are a growth company, but it's efficient growth as well, too, and we'll continue to do that. And we expect we're going to generate close to $2 billion over the next two years. And given the $5.1 billion we have, we think it'd be great to manage dilution through that. And we still have the opportunity, if we find great candidates, to hire faster if we so choose.
+
+Fred Lee -- Credit Suisse -- Analyst
+
+That's very helpful. Thanks.
+
+Operator
+
+We now turn to Brad Reback from Stifel. Your line is open.
+
+Brad Reback -- Stifel Financial Corp. -- Analyst
+
+Great. Thanks very much. Mike, over the last three years, you've added 1,800 to 1,900 new customers each year. So, as we look into '24, should we expect that to continue in a similar sort of growth in revenue per customer? Or will it skew more toward revenue per customer? Thanks.
+
+Mike Scarpelli -- Chief Financial Officer
+
+First of all, I don't really focus on the total number of customers. As I've said many times, I'd like to focus on quality customers. We tend to focus on large enterprise, or they can be small that have the ability to be significant customers. And so, clearly, the number of customers is going to grow.
+
+Whether we add 1,800, 2,000, or 1,500, I really don't know next year. I'm going to focus more on what those right customers are. And you will see the revenue per customer growing. Yes, our $1 million-plus customers have stayed flat at $3.7 million, but we also added a number of new customers in there.
+
+Our Global 2000 now are up to $1.4 million in trailing 12 months. They were at $1.3 million last quarter, yet we still added more Global 2000. So, I do think the revenue per million-over-plus customer and G2K is going to continue to grow over time, and I think you're going to see more growth out of those Global 2000 numbers.
+
+Brad Reback -- Stifel Financial Corp. -- Analyst
+
+That's great. Thanks very much.
+
+Operator
+
+Our next question comes from Brent Bracelin from Piper Sandler. Your line is open.
+
+Brent Bracelin -- Piper Sandler -- Analyst
+
+Thank you. Good afternoon. Frank, 20% of customers have tried Snowpark Python. When do you think that those use cases and workloads could actually move from testing and experimentation to actually driving acceleration in the business? Do you think this is a potential lever in the second half? Or do you think it take a year for a lot of these customers to work out some of these new use cases from a workload driver perspective?
+
+Frank Slootman -- Chairman and Chief Executive Officer
+
+Yeah. In terms of what we're already seeing in the velocity of consumption that is coming from Snowpark, we think it will be in the second half at some point, where we're going to see what we think is a material impact from that. But it's still early days. We're growing from a very small base.
+
+So, yes, we are seeing high velocity that still need to persist before, on our revenue scale, it becomes material.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Said another way, Brent, our guidance for this year is not material, what we have for Snowpark, but I do think longer term will be much more materially. It could give us upside, but it's still too early.
+
+Brent Bracelin -- Piper Sandler -- Analyst
+
+Very helpful. And then, Mike, I want to go back to the margin comment here. I get recession impacting a drag on the growth business for 100% usage model, but you are guiding a 25% free cash flow margins at, call it, $2.5 billion scale. Are you rethinking the profitability of this business at $10 billion scale, just thinking through margins today and what they potentially could be at much larger scale?
+
+Mike Scarpelli -- Chief Financial Officer
+
+Well, you're just going to have to wait for June or Investor Day when we give an update on that model, but clearly, there's upside to what we said last Investor Day.
+
+Brent Bracelin -- Piper Sandler -- Analyst
+
+Great. Thank you.
+
+Operator
+
+We now turn to Tyler Radke from Citi. Your line is open.
+
+Tyler Radke -- Citi -- Analyst
+
+Yes. Good afternoon, and thanks for taking the question. Mike, going back to your comments on the bookings slowdown at the end of the quarter, how much of that was driving the lower outlook for the full year versus actual consumption slowdown that you saw? And I guess, secondly, as you think about that booking slowdown, are you incorporating lower close rate assumptions just given that this was the first quarter that you converted, you know, below 100% of the weighted adjusted pipeline? Thank you.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Most of that bookings was really just a duration, customers buying enough capacity to get them through. Yes, there were customers that we did not land some new ones that have deferred into this year to do deals that does have an impact in the second half of the year on revenue. But the biggest thing on the revenue guide is really we are seeing the newer customers take longer to ramp. And these are some of our big customers that are large Global 2000 that are very methodical in the way they do things.
+
+Unlike some of the early adopters that were do everything as possible to get everything on Snowflake as soon as possible.
+
+Operator
+
+We're now turning to Simon Leopold from Raymond James. Your line is open.
+
+Victor Chiu -- Raymond James -- Analyst
+
+Hi, guys. This is Victor Chiu in for Simon. Regarding the behavior of the new cohorts, do you anticipate that consumption accelerates and returns to previous consumption rates in a more normalized environment? Or is this a structural shift around how new cohorts are kind of approaching their implementations, and this is how we should think about it as kind of the status quo going forward?
+
+Mike Scarpelli -- Chief Financial Officer
+
+Well, what I would say is we're a consumption model that literally, the beginning of the day, we have zero revenue, and customers choose to use Snowflake. In a tight macro environment, I think people are watching their costs. But just as quickly as they can turn Snowflake off, they can ramp it up very quickly as well, too. And so, we're seeing customers, as I said before, use Snowflake more efficiently, be more methodical in how they roll Snowflake out to make sure they're doing things.
+
+But there's really no big change. Customers are still consuming. They're just not growing at the rate they were. They're still growing, and you see that in our net revenue retention.
+
+Victor Chiu -- Raymond James -- Analyst
+
+OK. That's helpful. And just one quick follow-up. Can you help us understand a little more around your R&D priorities? Maybe help us understand where your preferences are between adding new features versus entering new markets.
+
+Just trying to get a sense for where you see opportunities around your R&D efforts.
+
+Mike Scarpelli -- Chief Financial Officer
+
+I'll let Christian talk about that.
+
+Christian Kleinerman -- Senior Vice President, Product
+
+Yeah. We continue investing and innovating across the three broad vectors that we discussed in the past. One is continued progress on analytics. Second one is around collaboration, where data sharing, clean room split.
+
+Here, one is the broader category of workload enablement, but we've seen computation to come closer to the data. That's where Snowpark's extremely many other initiatives fit in. So, we continue investing and making progress on all three fronts.
+
+Mike Scarpelli -- Chief Financial Officer
+
+And on the product side or in market side, we will have FedRAMP high very, very soon that the public sector, we're going to be able to go after. And as well, we're working on IL5 and expect we'll have -- the public sector will start to be more material to us this year in terms of new deals. And in terms of new markets, we continue to explore China with a strategy for our global multinationals who operate in China, and that is something where we will be in there this year. And then the other thing that I would say, too, is we're not opening any new countries, and we're going to invest more in some of the bigger international markets like Japan where we're seeing huge opportunity.
+
+They just move slower.
+
+Victor Chiu -- Raymond James -- Analyst
+
+That's helpful. Thank you.
+
+Operator
+
+Our next question comes from Will Power from Baird. Your line is open.
+
+Will Power -- Robert W. Baird and Company -- Analyst
+
+OK. Great. Thanks. It looks like a really nice comprehensive agreement with AWS.
+
+I guess I wonder in that vein if you could provide any update as to the Azure relationship, the opportunity there, what go-to-market currently looks like. And then, Mike, just as it pertains to margins this year, margin guidance, a bit higher than where you were previously despite the lower revenue outlook. Just maybe any other color on kind of the key levers helping to enable that.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Well, I'll start with the margins first. Clearly, when we, like many of our customers started looking at our costs, and we slowed down some of our hiring this year, and so that's really driving the margin outperformance, as well as efficiencies in the way we do things. And we are committed to continuing to operate the company as efficiently as possible, so do expect, longer term, more leverage in the model there. In terms of the relationship with the cloud vendors, I would say, the new AWS agreement is a great step forward in improving an already really good relationship with AWS, to begin with.
+
+We had a $1.2 billion commit. Now, we have a $2.5 billion commit over the next five years, and it's much better alignment go-to-market between the two. AWS, we're still -- Azure, we're still two and a half years into that five-year contract. We will start discussing with Azure trying to get better terms.
+
+I'm not just talking pricing. I'm talking go-to-market working together with one another, and there's no change in GCP to date. I'm hopeful there could be something in GCP longer term. We will come to the end of our GCP contract in May of 2024, and we're tracking to fully consume what we committed to with GCP, but we're clearly running ahead with Azure and AWS, and that's why we did an early renewal or a new contract with AWS.
+
+Will Power -- Robert W. Baird and Company -- Analyst
+
+Thank you.
+
+Operator
+
+We now turn to Fred Havemeyer from Macquarie. Your line is open.
+
+Fred Havemeyer -- Macquarie Group -- Analyst
+
+Hi. Thank you. You know, Mike, I wanted to go back to an earlier comment you made about some of your newer customer cohorts being more methodical in their approach to ramping on Snowflake. Could you provide a little more context around what you're seeing there in terms of what they're doing? Is this something around the -- perhaps like anything budget-related, oversight, internal change management, or anything? And I'm trying to square that also -- or not square it, rather, but understand it in context with the description you gave that the enterprise segment is performing quite well.
+
+Thank you.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Well, I'm just telling you, they're not growing as quickly as what they did, what we saw in 2021 and 2022, where I think it was a little bit more euphoric with companies who didn't have as much cost discipline around spending, and you're seeing people being more cost-conscious in how they do things across the board, not just on Snowflake. That's why you're seeing these companies do RIFs out there. And as a result, we do see these companies growing, albeit they're growing at a more methodical pace. We're not seeing these crazy spikes in consumption in customers.
+
+And that's also a function of people are using Snowflake more efficiently in terms of really planning out the rollout of Snowflake. Also, our PS resource, since they're actively involved with customers, our partners are getting better trained on how to do Snowflake migrations. This just -- this is really a maturing of our partner ecosystem and us.
+
+Fred Havemeyer -- Macquarie Group -- Analyst
+
+Thank you.
+
+Operator
+
+Our next question comes from Michael Turrin from Wells Fargo. Your line is open.
+
+Michael Turrin -- Wells Fargo Securities -- Analyst
+
+Hey, great. Thanks.
+
+Mike Scarpelli -- Chief Financial Officer
+
+Sorry, I can't hear you. Can you repeat that?
+
+Michael Turrin -- Wells Fargo Securities -- Analyst
+
+Oh, yeah. So, start from the beginning. Yeah. Happy to.
+
+Even with some of the impacts you're mentioning, the NRR is still holding strong at 158%. Not lost on us, but any change in how you're thinking about target levels? Realize there's variability that you said you expect those to remain above 130% for a long time. Just anything you're seeing currently that could cause that metric to dip more meaningfully. Or anything you can add there is helpful.
+
+Mike Scarpelli -- Chief Financial Officer
+
+We're not forecasting it to dip to that level anytime soon. But clearly, as the numbers get bigger, it becomes harder. And that number is still going to be a very high number, and it really all depends upon the customers we land today and the ones that we landed over the last two years that will come into our cohort next year. But clearly, if you recall back in 2020, we actually had an acceleration in our net revenue retention rate.
+
+I'm not saying that's going to happen, but that is possible that that could happen as well, too. You look through 2022, our net revenue retention went up. And that's the beautiful thing of a consumption model. Just as companies can really control their spend on Snowflake, when they open up their budgets more, they can ramp very quickly existing customers on Snowflake that could drive that up, but we're not seeing a precipitous drop off longer term in the net revenue retention.
+
+It will potentially come down longer term, but it's going to still stay very high.
+
+Michael Turrin -- Wells Fargo Securities -- Analyst
+
+Helpful. Just one more, if I may. Sorry. That's helpful.
+
+Any -- you've mentioned the new customers ramping slower. I think we can appreciate the environment we're in. But is -- are there things you're contemplating either from a product or go-to-market perspective that could change that dynamic at all? Or is it more a matter of being patient, letting them come to you, and this all leads us out over time, from your perspective?
+
+Mike Scarpelli -- Chief Financial Officer
+
+Yeah. I also want to stress, too. That's on average. There are some customers who are ramping very, very quickly.
+
+But that was the whole strategy behind the SnowConvert acquisition of Mobilize, so that's really to help enable migrations faster. That's also why we are spending a lot of time certifying and training our partners so they can work on this. We are doing everything we can to continue to see customers ramp on Snowflake. And to be clear, they continue to ramp at a very good pace, albeit not at the euphoric pace that they were in the past.
+
+Michael Turrin -- Wells Fargo Securities -- Analyst
+
+That's very clear. Thank you.
+
+Operator
+
+Our next question comes from Mike Cikos from Needham and Company. Your line is open.
+
+Mike Cikos -- Needham and Company -- Analyst
+
+Hey, guys. Thanks for getting me on the call here. I wanted to see if I could parse back the guidance construction that you guys have. I know a couple of other folks have asked about maybe total customer ads, and I know, Mike, you had commented that you guys are looking to focus on the quality customers.
+
+If I just look at like the Global 2000 as an example, I think previously, Snowflake has spoken about having, call it, one- to two-year sales cycles for some of these customers, again, because it's a strategic relationship. Is there any way or can you provide any detail as far as how you're thinking about additions from the Global 2000? Or how those net retention rates are expected to trend over the course of the year? And then one follow-up, if I could. I know an earlier colleague had asked about the company's exposure to, let's say, that the more VC-backed companies, which are clamping down versus the euphoric growth that you had seen previously. Can you size up what that exposure is to that customer segment?
+
+Mike Scarpelli -- Chief Financial Officer
+
+So, you asked a number of questions, but the first thing is we land large enterprises, Global 2000, as fast as we can. They are large, long sales cycles. They will be lumpy in terms of when we land them, but that is purely the booking. The ramping of those guys take time, and it's to get them to ramp to revenue.
+
+We have not seen any change in terms of really the average deal size of those Global 2000 when we land them. In terms of net revenue retention you asked about, I'm not going to guide to net revenue retention in the future. And in terms of your question on venture-backed companies, we have disclosed this before, and it remains there. It's roughly 10% of our business.
+
+That tends to be the segment that our inside sales really focuses on, not all of that, and there are some large companies in there as well, too. These are some of the unicorns that have been ready to go public for a while, but given the markets, have chosen not to. But when I look at those large unicorns, they're still very well capitalized.
+
+Mike Cikos -- Needham and Company -- Analyst
+
+That's awesome. Thanks. Thanks, Mike. And I know that you're saying that there's no change in the average deal size from when you're landing these customers, but you are saying that the newer cohorts are expanding at a slower rate.
+
+Can you provide like magnitude of differences? If customers have typically taken, I don't know, six months to ramp to their run rate, how is that trending today? Like what would that delta be, if we're thinking about magnitude based on this macro impact you're seeing?
+
+Mike Scarpelli -- Chief Financial Officer
+
+Yeah. I'm not going to disclose that. I'm just saying it's slower.
+
+Mike Cikos -- Needham and Company -- Analyst
+
+Got it. Thank you.
+
+Operator
+
+Our final question today comes from Brad Zelnick from Deutsche Bank. Your line is open.
+
+Unknown speaker
+
+Hey, thanks for taking the question. This is Dan on for Brad. I just wanted to ask one quickly on some of the hardware and software improvements that were kind of a key focus going into the year. And now that we've kind of gone through the year and you mentioned the Graviton migration is completed, how did those kind of play out, the impact of that on consumption relative to kind of what you're expecting? And then anything to kind of call out looking into next year, over the next several quarters, in terms of hardware, software improvements, and any reason that would kind of differ from kind of the long-term impact that you expect those to have that you've talked about before? Thanks.
+
+Mike Scarpelli -- Chief Financial Officer
+
+No. As I said before, we factor in a 5% revenue headwind every year associated with both hardware and software improvements and don't see any material hardware improvements happening. This year, as of today, there are a number of software improvements that we're constantly working on those. And so, I feel pretty good about that 5%, as I mentioned.
+
+The Graviton2 deployments are all completed as of today. We didn't quite get them all done last year. There were a number of them were finished in the first month of this quarter and so didn't quite have the full impact as we thought last year, but it's really hard to tell. But it's baked into our forecast for this year.
+
+Unknown speaker
+
+Thanks. And then just one last one. I was just curious on the international, if there are any markets, in particular, that kind of drove the underperformance in international.
+
+Mike Scarpelli -- Chief Financial Officer
+
+So, you know, EMEA actually had a good consumption. They were pretty much on plan from a consumption. They were a little slower on the booking side. And I think that's more of a function of people being more cautious with uncertainty in their businesses, I would say.
+
+Japan is doing well for us, but they are very methodical and buy as they go. And I would say some of the other areas in Asia are a little bit slower, but Asia is such a small piece of our overall business. It's really EMEA that was a little slower than what we would have thought from a bookings perspective and productivity.
+
+Unknown speaker
+
+Got it. Thanks.
+
+Operator
+
+[Operator signoff]
+
+Duration: 0 minutes
+
+Call participants:
+Jimmy Sexton -- Head of Investor Relations
+
+Frank Slootman -- Chairman and Chief Executive Officer
+
+Mike Scarpelli -- Chief Financial Officer
+
+Mark Murphy -- JPMorgan Chase and Company -- Analyst
+
+Kirk Materne -- Evercore ISI -- Analyst
+
+Brent Thill -- Jefferies -- Analyst
+
+Theo Thun -- Morgan Stanley -- Analyst
+
+Shel McMeans -- Barclays -- Analyst
+
+Gregg Moskowitz -- Mizuho Securities -- Analyst
+
+Derrick Wood -- Cowen and Company -- Analyst
+
+Allan Verkhovski -- Wolfe Research -- Analyst
+
+Sterling Auty -- SVB Securities -- Analyst
+
+Kamil Mielczarek -- William Blair and Company -- Analyst
+
+Christian Kleinerman -- Senior Vice President, Product
+
+Fred Lee -- Credit Suisse -- Analyst
+
+Brad Reback -- Stifel Financial Corp. -- Analyst
+
+Brent Bracelin -- Piper Sandler -- Analyst
+
+Tyler Radke -- Citi -- Analyst
+
+Victor Chiu -- Raymond James -- Analyst
+
+Will Power -- Robert W. Baird and Company -- Analyst
+
+Fred Havemeyer -- Macquarie Group -- Analyst
+
+Michael Turrin -- Wells Fargo Securities -- Analyst
+
+Mike Cikos -- Needham and Company -- Analyst

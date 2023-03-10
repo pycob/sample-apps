@@ -1,0 +1,605 @@
+KR earnings call for the period ending December 31, 2022.
+
+Kroger (KR -0.73%)
+Q4 2022 Earnings Call
+Mar 02, 2023, 10:00 a.m. ET
+
+Contents:
+Prepared Remarks
+Questions and Answers
+Call Participants
+Prepared Remarks:
+
+Operator
+
+Good morning and welcome to the Kroger Co. fourth quarter and full year 2022 earnings conference call. [Operator instructions] Please note, this event is being recorded. I would now like to turn the conference over to Rob Quast, senior director of investor relations.
+
+Please go ahead.
+
+Rob Quast -- Director, Investor Relations
+
+
+Good morning. Thank you for joining us for Kroger's fourth quarter and full year 2022 earnings call. I am joined today by Kroger's chairman and chief executive officer, Rodney McMullen; and chief financial officer, Gary Millerchip. Before we begin, I want to remind you that today's discussions will include forward-looking statements.
+
+We want to caution you that such statements are predictions and actual events or results can differ materially. A detailed discussion of the many factors that we believe may have a material effect on our business on an ongoing basis is contained in our SEC filings. The Kroger Company assumes no obligation to update that information. This morning, we released a presentation to accompany our call today, which can be found on our investor relations webpage at ir.kroger.com.
+
+We encourage you to refer to these materials as Rodney and Gary will make references to the presentation throughout the call. During our prepared remarks, we will share our fourth quarter and full year results. We will update you on the progress our team has made since our Investor Day last year on our leading with fresh and accelerating the digital strategy. We look forward to returning to a full Investor Day in 2024, where we expect to share detailed plans for how we will achieve synergies and maximize shareholder value from our merger with Albertsons.
+
+After our prepared remarks, we look forward to taking your questions. In order to cover a broad range of topics from as many of you as we can, we ask that you please limit yourself to one question and one follow-up question if necessary. I will now turn the call over to Rodney.
+
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thank you, Rob. Good morning, everyone, and thank you for joining us today. I'd like to start by sharing how incredibly optimistic I am about Kroger's future. Our performance last year demonstrates how Kroger is consistently delivering for our customers, our associates, and our communities, and by doing so, creating value for our shareholders.
+
+Since announcing our leading with fresh and accelerating with digital strategy at our 2020 Investor Day, we have made tremendous progress against our commitments. As you will see from the chart on Slide 6 of the presentation deck Rob mentioned, we are delivering a fresh, affordable, and seamless shopping experience for our customers with zero compromise on value, quality, selection, or convenience. We are advancing our purpose to feed the human spirit by significantly increasing associate wages and uplifting our communities. And we are delivering on our financial commitments through our strong, resilient, value creation model.
+
+With this strategy, we exceeded our financial goals and delivered attractive total shareholder returns during the past two years. In 2022, customer preferences shifted in response to inflation and macroeconomic uncertainty. Our customers were looking for more ways to stretch their budget. The gap between food at home and food away from home spending grew in the fourth quarter as more customers gravitated toward affordable meal solutions that restaurants simply can't provide.
+
+
+Our research shows that cooking at home is three to four times less expensive than dining out. And as Kroger was there for our customers, innovating quickly to meet their needs and wants, our nimble and customer-focused approach helped us deliver strong results in 2022, leading to total household growth and enhanced customer loyalty. We saw an especially strong response in our higher-income households as this segment grew by 1.1 million households, further illustrating the resiliency in our model and strong value proposition we offer customers across all segments. Gary will get into the specific details of our 2022 financial results and outlook for 2023 a little later.
+
+Before doing so, I'd like to spend some time reviewing how each pillar of our go-to-market strategy provided meaningful and measurable customer benefits last year and how we will accelerate those benefits in 2023. The foundation of our go-to-market strategy is fresh, our brand, personalization, and seamless. By delivering on these four pillars, our customers win and Kroger attracts new and more loyal customers. At the center of our go-to-market strategy is a superior customer experience.
+
+We deliver that by consistently providing customers a full, fresh, and friendly experience. Kroger continued to demonstrate operational excellence in 2022 as we saw improvements in all three metrics. We believe our go-to-market strategy is creating a unique value -- customer value proposition designed to perform in many economic environments. We will continue to invest in our pillars and the customer experience to differentiate the value we offer.
+
+First, leading with fresh. As an important influence on where customers shop, we are constantly improving how we bring even fresher food to our stores and e-commerce experience. Our end-to-end fresh initiative is changing the way our teams deliver on our commitment to freshness, and we are incredibly pleased with the success. In 2022, more than 1,400 stores implemented the end-to-end produce solution, driving measurable increases in both fresh and total store sales.
+
+In 2023, we will continue innovating the fresh experience to drive customer satisfaction and improve our product mix. We continue to improve inventory management tools, strengthen our supply chain to deliver additional days of freshness, and enhance our offerings to meet customer demand. As a reminder, our merger with Home Chef brought significant capabilities in in-store and restaurant-quality meal solutions. We will be expanding our Home Chef production facilities to meet this growing customer need.
+
+Next, Our Brands. There are -- the Our Brands portfolio allows us to offer exciting products at great value while driving incremental sales and improving margins. Our Brands' quality and value proposition is especially important when inflation is affecting so many of our customers' lives. To meet the needs of customers on a budget, we launched a new opening price point product line called Smart Way.
+
+By consolidating and simplifying several brands into one, we are making it easier for customers while creating a point of differentiation across the full portfolio. We will continue expanding Our Brands to more categories with innovative product offerings. Our goal is to help every customer find high-quality, affordable products they love, from pantry staples to fresh food to ready-to-eat restaurant-quality meals. Now, I'll move to personalization.
+
+Our data science teams are using predictive science to serve customers the right products at the right time and at the best value. Because we know our customers so well, we are able to provide recommendations to start their baskets and deliver personalized offers on the products most important to them, saving them time and money and making their lives easier. In return, our customers reward us with their trust and loyalty, consistently ranking us among the best at being able to offer personalized savings and solutions that meet their needs. In 2022, we grew loyalty as our customers more deeply engaged with personalized coupons and fuel rewards.
+
+As customers look for more ways to save, digital coupon engagement hit an all-time high during the year. Our combined paper and digital coupons helped save our customers more than $1.4 billion on products they need and want. That's on top of our everyday promotions and all the other value we offer. To provide even more value, we launched Boost, the industry's most affordable membership nationwide in July.
+
+Early results are exceeding our expectations with incremental engagement and overall household spend. We are evolving Boost with new benefits to further broaden its appeal and create additional customer value. In 2023, we will make significant investments to build out our personalization capabilities, including increasing the use of real-time data to predict customer needs, which will support sales growth during the next three years. Finally, turning to seamless.
+
+Seamless is growing in importance among our customers, and we expect it will significantly -- be a significant growth driver over the next several years. We have built a digital platform that offers a seamless shopping experience with zero compromise, allowing customers to shift effortlessly between store, pickup, and delivery solutions. As you'll see on Slide 12, our combination of stores and dedicated fulfillment centers positions Kroger to serve all customer trips, from in-stock shopping to rapid delivery on needed-now items to large stock-up orders. Despite the easing of pandemic-related shopping behaviors that led to a significant increase in online shopping, more and more customers are incorporating e-commerce into their daily permanent routines, recognizing the value and convenience online shopping offers.
+
+We expect digital sales will continue to grow at a faster pace than overall food-at-home sales and believe Kroger is well-positioned to deliver double-digit growth in over the next three years. As we work to become the most trusted online grocery destination, we are focused on four key areas that will position us to deliver that growth. We start by providing a compelling Kroger-owned digital destination, where we offer customers exceptional value, personalization, and freshness in a single, easy-to-use online experience. Second, we are focused on delivering best-in-class fulfillment, driving trust and loyalty by exceeding expectations for quality and freshness.
+
+Our delivery approach is unique in the fact that we have a large store network conveniently located close to our customers and large dedicated fulfillment centers designed efficiently to pick large orders. Our dedicated fulfillment centers provide the most reliable experience, the highest in-stock levels, best on-time delivery, and one-of-a-kind white-glove experience with industry-leading net promoter scores. Kroger delivery customers are more engaged across our entire ecosystem, spending more and shopping with us more often. Looking ahead, we will continue to learn through our customer fulfillment network with a focus on driving profitability and efficiencies to ensure that we are well-positioned to deliver sustainable, profitable growth while delighting our customers.
+
+Next, we are focused on reaching new customers and adding more shopping occasions. Our delivery network allows us to offer enhanced service to new customers, and we will also grow our share of wallet by increasing the number of orders customers place with us. Solutions like Kroger Delivery Now, enabled by our vast network of conveniently located stores, can connect customers to fresh groceries and household essentials in as little as 30 minutes. This seamless ecosystem makes any shopping experience simple for our customers.
+
+Finally, we are driving our profit flywheel and improving margins by reducing our digital cost to serve and growing our alternative profit streams. To accomplish this goal, we are lowering fulfillment costs, building the density of demand and last-mile routing, engaging directly with our third-party vendors, and growing digital retail media. Now, let me share how we are accelerating growth in our model through alternative profits. During the last several years, we invested heavily in technology to transform our business and enter new high-growth and high-return businesses.
+
+These businesses contribute meaningfully to our results, with alternative profit businesses achieving $1.2 billion in operating profit in 2022. Kroger Precision Marketing is one of our fastest-growing businesses and is well-positioned to win within the U.S. retail media landscape, which is projected to be a $55 billion industry by 2024. What makes our retail media business special is our ability to help brands achieve a greater return on their media investment.
+
+For the fifth year in a row, KPM was recognized as a leader in the retail media space by the Path to Purchase Institute, which collects feedback from those closest to the retail media networks and assessing their effectiveness. KPM was recognized as a leader for many of its capabilities, including maintaining its leadership in targeting and measurement capabilities, a testament to the strength of our unique product offerings and the insights we bring to this emerging landscape. Our associates enable our success, and we are committed to investing in theirs. To remain an employer of choice, we support our associates' development and holistic well-being.
+
+We provide our associates with the tools they need to grow their careers that they want at all stages. In 2022, Kroger was named as a best place to work in IT for the fifth consecutive year and a best place to work for disability inclusion for the third year. We also continue to support our associates through investments in wages and comprehensive benefits. In 2022, we raised our average hourly rates by more than 6% and has now invested an incremental $1.9 billion in associate wages since 2018.
+
+Our average hourly rate is now more than $18 and more than $23 when you include comprehensive benefits. We are committed to sustainably increasing associate wages and plan to invest more than $770 million in associates in 2023. We value and respect our associates, and investing in their success is just one way we demonstrate that. We take seriously our role in helping to create a healthier and thriving neighborhoods across the country.
+
+The centerpiece of our efforts is Kroger's Zero Hunger, Zero Waste social impact plan, an industry-leading commitment to build communities free from hunger and waste. Since launching Zero Hunger, Zero Waste, we have made continual progress toward our goals. We have directed more than $1.65 billion in food and funds to help end hunger, including donating more than 2.3 billion meals. We are making progress on our carbon emissions reduction plan and Our Brands' sustainable packaging goal.
+
+I'm especially proud of our incredible associates who helped us reach a key milestone this year with 100% execution of our surplus food rescue programs across each and every store across the company. Looking ahead, we will continue to focus our efforts on our ambitious goal of ending hunger in our communities and eliminating waste, especially food waste, throughout the company. In summary, our proven go-to-market strategy led to enhanced loyalty and household growth as we help customers manage the effect of inflation in 2022. We are well-positioned to sustain our momentum into 2023.
+
+And with that, I'll turn it over to Gary to take you through our results and expectations for 2023. Gary.
+
+Gary Millerchip -- Chief Financial Officer
+
+Thank you, Rodney, and good morning, everyone. Before jumping into our 2022 results and sharing our outlook for 2023, I'd like to take a step back and remind you how Kroger's value creation model is enabling the company to deliver sustainable value for our shareholders. We believe our value creation model has been a key to delivering consistently strong results over the past four years and is positioning Kroger for growth in years to come. The go-to-market strategy that Rodney outlined earlier is the foundation of our model.
+
+Over recent years, we have invested significantly in our people, our customers, and technology to create a leading omnichannel position in food retail. By executing our go-to-market strategy, we win customers in our core supermarket business, including health and fuel, and drive significant customer traffic and data into our ecosystem. This, in turn, allows us to deploy our investments in technology and 84.51 to deliver even greater value for customers and create new high-growth, high-margin alternative profit businesses. The value generated from these businesses enables us to reinvest back into our supermarkets and drive further store and digital traffic, creating a flywheel effect.
+
+We are evolving from a traditional food retailer into a more diverse food-first business that we believe can deliver sustainable future growth and succeed in a variety of operating environments. As a reminder, since introducing this model in 2019, we have achieved consistent returns for our shareholders that have significantly exceeded our TSR commitment of 8% to 11%. As you can see in table -- the table on Slide 19, over the past three years, Kroger has achieved more than 19% compounded annual growth rate in adjusted FIFO net operating profit and approximately 25% compounded annual growth rate in adjusted EPS. Over the same time period, we generated adjusted free cash flow of approximately $9.7 billion and have returned a total of nearly $5.8 billion to investors via dividends and buybacks.
+
+Overall, we have delivered nearly three times the expected return from our TSR model over this three-year period. Importantly, at the same time, we continue to invest in the business to support future growth. This included improving our price position relative to key competitors since the start of the pandemic, increasing associate wages and benefits by 34% since 2018, and increasing the amount of capital investments allocated to technology and digital capabilities to enable top-line growth and margin expansion. Our strong performance and progress with our model in recent years also gave us the financial flexibility and confidence to announce our proposed merger with Albertsons.
+
+Upon closing, which is anticipated to be in early 2024, we believe the merger will significantly accelerate our go-to-market strategy and deliver TSR well above our stand-alone model during the first four years post-close. I'll now walk through our full year 2022 financial results. Kroger delivered adjusted EPS of $4.23 per diluted share, an increase of 15%. We achieved identical sales, excluding fuel, of 5.6%.
+
+The FIFO gross margin rate, excluding fuel, decreased 9 basis points. This reflects the outstanding work of our merchandising and sourcing teams who are extremely effective in managing higher product cost inflation while maintaining competitive prices and helping customers manage their budgets. The OG&A rate, excluding fuel and adjustment items, decreased 19 basis points, reflecting sales leverage and cost-saving initiatives, partially offset by planned investments in associates. And I'm delighted to say for the fifth consecutive year, we delivered cost savings of $1 billion in 2022.
+
+Our adjusted FIFO operating profit was $5.1 billion, an increase of 18% from last year, and the LIFO charge for the full year was $626 million, compared to $197 million in 2021. Turning now to our fourth quarter results. Adjusted EPS was $0.99 for the quarter, an increase of almost 9%. We saw continued momentum in our identical sales, without fuel, of 6.2%.
+
+Underlying growth would have been 6.7% after adjusting for the effect of Express Scripts. Our Brands contributed another strong quarter with identical sales of 10.1%, reflecting the growing importance to customers of these exclusive-to-Kroger products. And digital sales also accelerated during the quarter, up 12%, led by 22% growth in delivery solutions. Kroger's FIFO gross margin rate, excluding fuel, decreased 1 basis point; and the OG&A rate, excluding fuel and adjustment items, decreased 56 basis points.
+
+Fuel remains an important part of our overall value proposition. Our loyalty program, which can save customers up to $1.25 per gallon, has been one of the many ways we have helped customers stretch their dollars over the past year and contributed to our gallon sales outpacing the industry during the quarter. The average retail price of fuel was $3.39, compared to $3.30 in the same quarter last year. Our cents per gallon fuel margin was $0.51, compared to $0.44 in the same quarter last year.
+
+Adjusted FIFO operating profit was $1.27 billion, a year-over-year increase of 26%. And the LIFO charge was $234 million in the fourth quarter, reflecting sustained higher product cost inflation, particularly in grocery. This compares to a charge of only $20 million in Q4 last year. Included in our fourth quarter results was a $164 million goodwill and fixed asset impairment charge related to Vitacost.com.
+
+The talent and capabilities gained through the merger with Vitacost in 2014 have been key to advancing Kroger's digital platform and growing our digital business to more than $10 billion in annual sales. As our digital strategy has evolved, our primary focus looking forward will be to effectively utilize Kroger's store pickup and delivery capabilities, and this reprioritization resulted in the impairment charge. Vitacost.com will continue to operate as an online platform, providing great value, natural, organic, and eco-friendly products for our customers. Adjusted free cash flow for the year came in $800 million lower than anticipated.
+
+This was entirely due to movements in working capital toward the end of the year. The cause was a combination of factors, including higher inflation affecting inventory, some forward buying to protect margins, and timing of accounts payable and third-party receivable payments around the year-end. As shared last quarter, we feel comfortable with our overall level and mix of inventory, which is higher due to heightened levels of inflation and in-stocks returning to pre-pandemic levels. Looking over a five-year time horizon and smoothing the volatility in working capital experience during the pandemic, we have seen an underlying benefit from working capital over this time period, and we would expect to see further improvement going forward.
+
+We remain confident in our ability to generate strong free cash flow and, as shared in our guidance this morning, expect to achieve adjusted free cash flow of $2.3 billion to $2.5 billion in 2023. Turning now to financial strategy and capital allocation. We will continue to be disciplined with our capital investments, prioritizing the highest growth opportunities that strengthen our business and deliver solid returns for our shareholders. As you saw in our guidance this morning, we are anticipating capital investments of $3.4 billion to $3.6 billion this year, which is consistent with our long-range TSR model.
+
+Our priorities for 2023 are aligned with our value creation model and are expected to drive future sales growth and margin expansion. To drive sales, our focus is on enhancing our store and digital ecosystem. We apply a data-driven approach to make decisions on a store-by-store basis, prioritizing store formats and locations with the highest growth potential. Additionally, we are continually enhancing our seamless experience, including investing in technology to improve the customer proposition and augmenting personalization, which will in turn create additional alternative profit opportunities.
+
+We continue to invest in areas of the business that will drive operating margin expansion, including enhancements to our supply chain capabilities. These investments help improve margins and differentiate our fresh offering. And finally, an essential element of our value creation model has been our ability to take cost out of our business. We remain focused on eliminating waste in areas that do not affect the customer experience, and we are making investments in technology to improve store productivity, lower digital fulfillment costs, and reduce waste and shrink.
+
+These improvements will drive an incremental $1 billion of cost savings in 2023, which would mark our sixth year in a row of delivering $1 billion of savings. In closing, I'd like to share some additional color on our expectations for 2023. While there is still uncertainty regarding the economic outlook, our go-to-market strategy is resonating with customers, and we believe our successful value creation model positions us well to navigate evolving market conditions. Before I go into the details of our 2023 guidance, there are a couple of unusual factors that I'd like to highlight.
+
+First, Kroger's decision to terminate our agreement with Express Scripts in December of 2022 is expected to have a negative impact of 150 basis points on identical sales, without fuel. This decision is not expected to have a material effect on profitability. Second, 2023 will include a 53rd week. We expect the effect of this extra week add approximately $0.15 to our adjusted net earnings per diluted share for the year.
+
+With that important context, we expect to achieve identical sales, without fuel, of 1% to 2% in 2023. Excluding the effect of Express Scripts, our underlying identical sales, without fuel growth, is expected to be between 2.5% and 3.5%. We expect to achieve adjusted FIFO operating profit of between $5 billion and $5.2 billion and adjusted net earnings per diluted share of between $4.45 and $4.60, including the expected benefit of the 53rd week. We expect to grow revenue by continuing to invest in our customers through competitive pricing and personalization and providing fresh products and a better shopping experience across our store and digital ecosystem.
+
+We will fund investments in gross margin in 2023 by improving our product mix as we accelerate momentum with our fresh and Our Brands initiatives and by growing our alternative profit businesses. As Rodney mentioned earlier, we will also continue to invest significantly in associate wages, and this will be funded by our planned cost-saving initiatives. While we believe fuel margins will remain structurally higher than historical averages, fuel profitability is expected to be a headwind to our model in 2023 as we lap historic fuel margins from last year. Our 2023 guidance assumes a LIFO charge of between $300 million to $350 million as a result of lower product cost inflation compared to 2022.
+
+While this amount is well above historical levels, LIFO is expected to be a year-over-year tailwind and should more than offset lower fuel profitability. In terms of quarterly cadence, we expect identical sales, without fuel, to be above the top end of our guidance range in the first half of the year as we continue to experience heightened levels of inflation. In the second half of the year, we expect identical sales, without fuel, to be at or slightly below the bottom end of our range as we expect inflation to taper later in the year. We expect adjusted earnings per diluted share in Quarter 1 will be slightly negative year over year as we cycle 22% growth in EPS from Q1 last year.
+
+Quarter 2 and Quarter 3 are expected to be within our annual guidance range, and Quarter 4 is expected to be above our guidance range as we cycle the higher LIFO charge in '22 and benefit from the 53rd week. As you heard from Rodney and myself this morning, Kroger is operating from a position of strength and the investments that we have made in our go-to-market strategy provide exciting opportunities for future growth. Our team is energized by these opportunities, and we believe Kroger is well-positioned to continue to deliver attractive and sustainable returns for our shareholders. I'll now turn the call back over to Rodney.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thanks, Gary. Before we open up the floor to your questions, let me provide an update on our pending merger with Albertsons. During the past few months, we've spent time getting to know Vivek and the Albertsons leadership team. We are incredibly impressed with their talent, culture, and commitment to their customers and communities.
+
+We look forward to bringing together our two highly complementary organizations to provide customers with lower prices and more choices while realizing the long-term value we expect this merger will deliver. We are working cooperatively with regulators responding to the Federal Trade Commission's second request and in discussions about the transaction while also working to identify potential buyers for the stores we expect to divest to obtain clearance for the transaction. We are pleased with the level of interest received thus far, and we'll work toward finding a solution that benefits all stakeholders. We remain on track to close the transaction in early 2024.
+
+During the quarter, we launched our integration planning efforts with the goal of preparing for a seamless cultural and operational integration. We expect to create customer benefits beginning day one post-close. The integration team is developing workstreams with clear objectives and milestones to deliver value for our customers, associates, communities, and shareholders. We are pleased with the progress we've made to date and will continue to provide updates as we have them.
+
+We achieved exceptional results in 2022, building on our record years in 2020 and 2021, and we exceeded our commitments in our leading with fresh, accelerating with digital strategy. Our strategy of focusing on our customers, our associates, and our communities is working. Our customers are telling us that we're doing a better job serving their needs. We continue to improve our associates' wages and comprehensive benefits with a 34% increase in the last five years.
+
+And we are helping to create healthier, thriving communities through our Zero Hunger, Zero Waste work. We believe our momentum is sustainable and will only accelerate upon the completion of our pending merger with Albertsons. With that, Gary and I look forward to taking your questions.
+
+Questions & Answers:
+
+Operator
+
+Thank you. [Operator instructions] Our first question for today comes from John Heinbockel of Guggenheim Partners. John, your line is now open. Please go ahead.
+
+John Heinbockel -- Guggenheim Partners -- Analyst
+
+Hey, Rodney. I wanted to start with, you know, since it's the beginning of a new year, as you guys think about your consumer deciles or quartiles, however you look at it, what's the wallet share opportunity, right, you know, maybe from the average consumer to your best, most loyal consumer? Where is the -- when you do sort of a gap analysis, where's the gap? You know, is it fresh? You know, where are the biggest pockets, right, where the average consumer is not spending as much as the most loyal?
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+John, thanks. I love the question. And we always look at it slightly different because we look at the opportunity is all the business. And even in places where we over-index, there's still a lot of opportunity.
+
+Customers that are most loyal to us will still spend 30% to 50% of their spending somewhere other than Kroger, and that's an opportunity for us to improve our position. When you look at fresh, we start off with a higher share of fresh than we do in other parts, but it's an area where we -- where we're meaningfully better than our competitors. So, our ability and focus on growing our business is to really -- what we find is full fresh and friendly resonates with all customer types. And we do it in a way where there's zero compromise.
+
+So, a customer on a budget can get great value for Our Brands. They can save 7% to 10% by buying Our Brands versus national brand. If you look at our Home Chef and products related to that, a customer can get a meal for, you know, one-third to one-fourth of what it costs going out. So, it's really all of those together.
+
+And our opportunity -- you know, our sweet spot is always the customer that likes a good value for the money. And fresh is incredibly important, and friendly is incredibly important. That's our sweet spot where we connect the best, and that is a growing area across the U.S. And we operate in many markets that are growing as well.
+
+So, for us, that's really our sweet spot and our opportunity, and our strategy is oriented around that. And then technology just provides the support for that, make it easier for the customer.
+
+John Heinbockel -- Guggenheim Partners -- Analyst
+
+Great. Maybe secondly, Rodney, when you look at the Express Scripts impact. So, how much of that is pharmacy versus non, right? And I know you guys have always said pharmacy customers are among the most loyal customers. How do you think about losing trips, right, because of this and then maybe using, right, your data? OK.
+
+You know, we know who -- I think you know who the Express Scripts customers were. We can do incremental outreach to make sure we don't lose trips with those particular households.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+If you look at the numbers that Gary provided, by far, the majority of that is pharmacy. Our teams are doing great work on using our discount cards to be able to help customers identify other alternatives. And in fact, in many cases, they're saving money. We're also going directly with some other companies to provide the benefit rather than going through a PBM.
+
+So -- but by far, the majority of the estimate that Gary provided is pharmacy, and we're using the things that you said to make sure that we don't lose that customer connection and we don't lose the trip to the grocery store. I don't know, Gary, anything you want to add to that?
+
+Gary Millerchip -- Chief Financial Officer
+
+I think you said it well, and I think that John described it. The work the team has done around using our data and personalization to make sure that we're protecting the customer, I think, is working.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thanks, John.
+
+John Heinbockel -- Guggenheim Partners -- Analyst
+
+Thank you, guys.
+
+Operator
+
+Thank you. Our next question comes from Ed Kelly of Wells Fargo. Ed, your line is now open. Please go ahead.
+
+Edward Kelly -- Wells Fargo Securities -- Analyst
+
+Hi, guys. Good morning and thanks for all of the color. Question for you to start, you know, Rodney, just kind of big picture. You know, we're coming off of an inflationary cycle that really none of us have ever sort of seen before.
+
+And obviously, there are a lot of implications associated with that. But as you look forward into '23 and sort of thought about providing guidance, how do you think, you know, the industry is going to evolve off of the heels of that? Meaning, you know, what's the level of inflation that you've embedded within your ID guidance of 2.5% to 3.5%, ex Express? How do you think about like the promotional backdrop and how that changes? Are you happy with your underlying tonnage, for instance, or volume, you know, given what's happened with pricing and what we've seen with comps at some like value players like Walmart, etc.? Just kind of curious as to how all of that played into the way you were thinking about guidance.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Yeah. If you look at inflation overall, we would expect inflation to be higher in the first half of the year than the second half of the year. And the quarterly insights that Gary provided really reflected that. If you look at -- the thing that we feel really good about, and I shared specifics on the prepared comments, the higher-income customer is really resonating with our value proposition, and we're having meaningful increases there in terms of that customer.
+
+And one of the things I always think is important for people to realize is the profitability of that customer is higher as well because they shop for the full mix of our stores and they would be buying more produce in fresh departments and deli bakery, which is driving some of that profitability shift. So, when you look at overall, we feel really good on how we're connecting with our customers. We feel really good at how we're improving on fresh. And when you look at the share that we're getting with the customer that really focuses on that, we feel good about.
+
+You know, when you look at it overall, we're always striving to do better, and I feel good about the progress we're making. We're excited about the opportunities we have in front of us, and we still think we can continue to do better. In terms of specifics on inflation, Gary, I'll let you share the specific inflation assumption because it's pretty -- during the year, it's obviously pretty wide range.
+
+Gary Millerchip -- Chief Financial Officer
+
+Sure. Yeah. Thanks, Rodney. Thanks for the question, Ed.
+
+From an inflation perspective, what we're seeing at the moment is that we've seen the last couple of quarters, inflation has really sort of stabilized. And what we're starting to see is, in the fresh categories, a sort of deceleration of inflation. But grocery has remained pretty stubborn in terms of the levels there. So, we're assuming, as Rodney mentioned, the first half of the year that a gradual decline, probably grocery remaining fairly stubborn where it is today, but some of the fresh categories continuing to show some deceleration.
+
+And then we're expecting sort of toward the end of the year that we get to sort of between low and mid-single digit inflation level rates. About sort of 4% to 5% would be our assumption around where we think inflation starts to come down to in the way that we built our assumptions for the year.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+And obviously, Our Brands --
+
+Edward Kelly -- Wells Fargo Securities -- Analyst
+
+Just a quick follow-up.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Go ahead, Ed.
+
+Edward Kelly -- Wells Fargo Securities -- Analyst
+
+Gotcha. Just a quick follow-up, Gary. The FIFO gross margin outlook for '23, I think there are some decent -- I mean, it seems like there's a decent impact associated with Express given there's no P&L impact of losing the comp. Just how are you thinking about FIFO gross margin, ex fuel, in '23?
+
+Gary Millerchip -- Chief Financial Officer
+
+Yeah. As you know, we generally don't get into a ton of specific guidance, but I would say, in general, we're thinking and the way we built our model is very much in balance and consistent with what we delivered in 2022 in terms of when you think about gross margin, we'll be continuing to invest in the customer in key areas of value that we know are important to them, whether that's pricing, promotions, continuing to roll out Boost, which creates a short-term headwind as you build the loyalty of the customer and get the incremental value over a longer period of time. We believe that there'll be some continuing meaningful tailwinds in our gross margin rate as we continue to execute on our go-to-market strategy. So, thinking about alternative profit streams, the work I mentioned in my prepared remarks about continuing to see improvement in Our Brands penetration, which is helpful to gross margin.
+
+And so, we overall think it's going to be a pretty balanced year. There's an awful lot going on in there as we're investing in the customer, investing in the experience. But as our model is now kind of reaching more of a rhythm and maturity of delivering on those gross margin improvements, that we're able to balance those things. I would say from an Express Scripts point of view and some of the other work that we've done around Kroger Specialty Pharmacy on making sure that we're really focusing on profitable growth in our health and wellness business, that those probably create, call it, a sort of 10-basis-point tailwind in gross margin, but a 10-basis-point headwind in OG&A.
+
+It's kind of net neutral in terms of the operating profit impact, as I mentioned in my prepared remarks. But it will change the optics of it just because of the sort of pulling those sales numbers out of our overall business model.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thanks, Ed.
+
+Edward Kelly -- Wells Fargo Securities -- Analyst
+
+Thanks, guys.
+
+Operator
+
+Thank you. Our next question comes from Simeon Gutman from Morgan Stanley. Your line is now open. Please go ahead.
+
+Simeon Gutman -- Morgan Stanley -- Analyst
+
+Hey. Good morning, Rodney. Good morning, Gary.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Good morning.
+
+Simeon Gutman -- Morgan Stanley -- Analyst
+
+My first question -- how are you doing? It's a little similar to Ed's question. If you look at the FIFO EBIT guided for 2023, essentially, call it, flattish. I'm just rounding relative to '22. If you divide the business up into core, I don't know, alternative, and maybe gas as profit pools, and I don't know if those would be the right three -- the big ones to focus on, can you give us a sense of the movement within getting to that flat -- roughly flat for EBIT year over year?
+
+Gary Millerchip -- Chief Financial Officer
+
+Yeah, I think what I'd probably say, Simeon, I think about it the sort of three bigger picture moving parts that I tried to sort of tee up the overall guidance with as well. So, I think about it as the 53rd week is adding, call it, $0.15 of earnings per share. So, that's helping with -- think of a penny is about $9 million to $10 million. So, think of it as like $150 million tailwind from the 53rd week.
+
+I think of gas. So, fuel being a headwind of -- in the sort of $200 million to $250 million range. And then I would think of the only -- the sort of core supermarket business as really sort of continuing to grow year over year. So, the gap is more than offsetting the impact of the 53rd week.
+
+The core supermarket business sort of executing on our value creation model, as I mentioned. So, underlying sales growth in that 2.5% to 3.5% growth because the Express Scripts business really isn't contributing to the bottom line. Continuing to invest in the customer, continuing to execute on our plans around driving cost out of the business, and improving mix and those things net overall getting us to a slight improvement. And [Inaudible]
+
+Simeon Gutman -- Morgan Stanley -- Analyst
+
+Okay. And then --
+
+Gary Millerchip -- Chief Financial Officer
+
+We won't get into the specifics, obviously, of breaking down the individual pieces. But we really categorize our profit as part of the overall ecosystem because we don't have media revenue unless we're driving the digital supermarket business. So, we very much look at it as a total ecosystem.
+
+Simeon Gutman -- Morgan Stanley -- Analyst
+
+Right. And then as a follow-up, on the backdrop regarding pricing, inflation, it seems like the backdrop is maybe more oligopolistic than one would have thought. Not that it's not competitive out there, but in terms of price. And wondering what that's a function of and maybe what could disrupt it.
+
+And is that a fair assessment?
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+We would certainly describe it and look at it different than that. And we've invested in pricing. I'm trying to remember for the last 20 years or so every single year and would expect to continue to do that. And we fund that through process change, identifying other things to get costs out.
+
+And, you know, an awful lot of our promotions are much more directed, personalized to the customer. So, it's not what you see when you go to a store to look on a shelf because we provide a significant higher percentage of our value to our customers through fuel rewards and personalized offers that are connected one on one from a -- and using technology and digital so that each person's individual. So, we would certainly not describe it that way, and we view it, you know, every year is incredibly competitive and everybody's working hard to do a better job and the customer gets the benefit of that.
+
+Simeon Gutman -- Morgan Stanley -- Analyst
+
+Thank you.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thanks, Simeon.
+
+Operator
+
+Thank you. Our next question comes from Michael Lasser of UBS. Michael, your line is now open. Please go ahead.
+
+Michael Lasser -- UBS -- Analyst
+
+Good morning. Thanks a lot for taking my question. Between the comments that you had indicated at the early start of the call where you're working on the profitability of your digital business, along with what it sounds like a slowdown in the rollout of your Ocado shed this year, have you evolved your thinking on the long-term profitability of digital sales for Kroger because you had previously indicated that you expected the incremental margin on an incremental dollar of sales to be at or above an in-store dollar of incremental sales?
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+When you look at our digital business long term, we wouldn't see the profitability be any different than this, a supermarket, when you look at it over a longer period of time. And if you look, what we find is a customer, when they move online, they actually, after a year, engage with us more in store than before. So, what we're really focused on is having an ecosystem where the customer thinks food, they think Kroger. And what we're finding is the customer routinely moves back and forth between the different channels.
+
+If you look at each piece of it, every single day, you're working to figure out ways to improve processes and take costs out. And then, you know, on top of it, obviously, retail media is an important part of the driver. So, when you look at it long term, we really see no change in the opportunity and potential. We're incredibly excited.
+
+And everything that we see, we think it will be more important than three years, five years, 10 years to have where the customer can engage with us through multiple ways. And the digital channel is a critical part of that. And we find that customer engages with us digitally even when they don't shop digitally. So, for us, we see it as exciting as we did before.
+
+We don't see the long-term profitability being different. And we're working continually in terms of both internally and with our partners on how to improve processes.
+
+Gary Millerchip -- Chief Financial Officer
+
+And maybe just to add, Rodney -- Michael, to the sort of short-term answer to Rodney's long-term perspective, I would say that we are seeing the benefits flow through in the profitability that we talked about on prior investor meetings. So, if you think about our existing digital business today, pickup through the store, delivery, what we're seeing is the cost to serve. We had our best-ever quarter for the cost to serve a digital order in the Q4 of 2022. Rodney mentioned media.
+
+The amount of media revenue we generate per digital transaction continues to grow. So, those are two of the big drivers that we expect to drive digital profitability, and we continue to see improvements in '22, and we expect improvements in '23 that will actually be part of the tailwind in the financial model I described earlier. So, we remain on that path, and we are making good progress.
+
+Michael Lasser -- UBS -- Analyst
+
+And, Gary, just to clarify that. Then why slow the rollout of the Ocado shed? And I'll add my second question just at this time. To get to the slightly below the low end of the range for ID sales by the end of the year with still low to mid-single digit inflation, do you assume that there's going to be a unit erosion by the end of the year? I don't need to tell you guys, groceries are expensive. And in a tough economic environment, that may get worse by the end of the year.
+
+The consumer may be pulling back even further. And we just want to make sure that you factored in some conservatism relating to your outlook. Thanks a lot.
+
+Gary Millerchip -- Chief Financial Officer
+
+Sure. Thanks, Michael. I'll try and be brief on those two. So, I think there, just to clarify, in the first part of the question, I was describing the majority of our digital business today.
+
+So, think about pickup through the stores. Think about the work that we're doing in delivery to customers today. And when we shared our doubling our digital profitability, that was based on those metrics. And so, how do we improve the cost to serve? How do we improve digital media revenue? On the -- for customer fulfillment centers, we're very much in the middle of that journey right now of sort of 18 months or so into those first two facilities, really kind of fully understanding the scale of demand and how the customers behave and how you optimize that model.
+
+So, I'd say more to come on that as we continue to understand that sort of key phase of those first two facilities, really seeing the progress there on profitability. But from a customer demand, the customer experience, we're seeing all the sort of things we'd have hoped to have seen around customer engagement.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+And we are actively looking for sites for some pre-announced locations, too, on those. And -- but finding the sites ended up being a little bit more difficult than what we would expected.
+
+Gary Millerchip -- Chief Financial Officer
+
+I think -- just very brief on your second question, Michael. You know, for us, it's about maintaining flexibility. We believe we've built our model to be able to adapt and to deliver value for our customers. We gave directional numbers just because I think it's helpful on inflation because of the LIFO calculation.
+
+But our expectation is -- our goal will be to continue to deliver more value for customers and over time grow our share and obviously make sure we meet the customer where they are. And we expect the second half of the year to have some -- definitely some things that we don't know how to perfectly plan for. We need to make sure we're nimble and agile to be able to adapt because that's clearly going to be changed in the second half of the year.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+And we feel good about our overall model being able to adapt and adapt to any situation in any market because we give a great value for the customer regardless. Thanks for the question, Michael.
+
+Michael Lasser -- UBS -- Analyst
+
+Thank you.
+
+Operator
+
+Thank you. Our next question comes from Kenneth Goldman of J.P. Morgan. Your line is now open.
+
+Please go ahead.
+
+Ken Goldman -- JPMorgan Chase and Company -- Analyst
+
+Hi. Thank you. You mentioned that one of the reasons why working capital was higher than usual in the fourth quarter is that you were buying a little bit ahead to protect margins, I assume, as inflation rises. I have two underlying questions here.
+
+First, was this mainly in the grocery department? You talked about grocery being particularly tough in terms of inflation. And then maybe more importantly, I'm just curious, is there going to be an offset to this in the first quarter or maybe as you run through that higher-than-usual inventory? I guess I'm really just trying to ascertain if you're going to buy less than usual from some of your grocery vendors next quarter or this quarter.
+
+Gary Millerchip -- Chief Financial Officer
+
+Yeah. Thanks for the question, Ken. From our perspective, the main forward buying would be in pharmacy and some in grocery. They will be the two key areas that we looked at and felt there was a good opportunity to protect margins, as I mentioned in the prepared comments.
+
+From our perspective on working capital, you know, certainly, some of the year-over-year variance would be things that we would expect to be maintained because we are seeing continued higher inflation on inventory. And as we called out, we're expecting as we improve in-stock levels as we have, that some of that will be sticky. We would look at some of the payables and receivables timing impact and would expect that to be coming back. In fact, if we look at our cash at the end of the first period, the first month of the new year, it was actually up by $1 billion and back in line with the prior year, which obviously wasn't the case at the year-end.
+
+So, we do think some of it was timing and will flow through. But obviously, we have strong plans for the year in terms of continuing to work with our partners. And I would focus more on, from our perspective, how we make sure we're continuing to drive free cash flow, and we feel good about our ability to do that.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+And the forward buying is really driven by the economics at any given day in terms of what's available in the marketplace. And if it's a good return, we'll invest the money there. If the returns are not good, then you'll see the flow benefiting the working capital.
+
+Gary Millerchip -- Chief Financial Officer
+
+We didn't give exact numbers. I would also say, Ken, you know, the forward buying would be a smaller part of the number. The timing of payments would be a bigger part of that than the actual forward buying.
+
+Ken Goldman -- JPMorgan Chase and Company -- Analyst
+
+Got it. Thank you. And then a quick follow-up. The implied operating cash flow, it's one of the questions I'm getting from investors.
+
+You gave a capex number, so we can back into it, obviously. Just curious why -- given the strong EBIT growth this year, given some of the working capital reversals, why would it not be a little bit better than what guidance is suggesting? I know you talked a little bit about this. I just wanted to get a little bit more detail on some of the underlying factors there if possible.
+
+Gary Millerchip -- Chief Financial Officer
+
+Yeah, I think I would say we tried to guide to what we think is a more normalized year in 2023, Ken. Part of it, I would say we probably are being a little bit conservative because of -- we want to see how this unwind of COVID exactly plays out. A couple of examples would be if inflation does remain at higher levels, obviously, that could impact inventory. But also, as we kind of unwind accruals on things like incentive payments, assuming we're more going to be more like an on-target incentive payment than a significantly higher than on-target payout, those things can create some one-year adjustments, too.
+
+So, there's a few areas that just kind of create a few wrinkles. And candidly, we just want to be conservative to make sure we can see the flow-through of the catch-up from 2022 as well. So, we feel we tried -- what we tried to do is take a conservative view of a normalized environment, but there is still some, I would say, unwinding that we wanted to make sure we understood as we report it out in 2023.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+And our incentive plan is designed -- our long-term incentive plan is designed such that we are incentivized to do better than the guidance we've given --
+
+Gary Millerchip -- Chief Financial Officer
+
+Yeah, I think it'd be fair to say our internal goal would be higher than what we shared because we do believe there's more opportunity, but we thought it was appropriate to be conservative in the circumstances.
+
+Ken Goldman -- JPMorgan Chase and Company -- Analyst
+
+Thank you.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thanks, Ken.
+
+Operator
+
+Thank you. Our next question comes from Rupesh Parikh from Oppenheimer. Rupesh, your line is now open. Please go ahead.
+
+Rupesh Parikh -- Oppenheimer and Company -- Analyst
+
+Good morning and thanks for taking our question and also congrats on a great quarter. So, I just want to touch on market share. I was just curious, if you look at Kroger's performance in Q4, and I'm not even sure if you have the full year data. Just curious how your market share is performing versus your expectations because if I recall, last quarter, you were starting to see improvements in the market share.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Yeah, we're continuing to see improvement. And if you look at internally, if you were at one of our meetings, you'd hear us continually focus on how to even continue to improve. Our objective and expectations of ourselves is to grow market share. And if you look at the higher-income shopper in those customer segments, we did a great job gaining share in fresh.
+
+We're doing a good job of gaining share. And, you know, I would say we're pleased with the progress, but we still are not satisfied.
+
+Rupesh Parikh -- Oppenheimer and Company -- Analyst
+
+OK, great. And then maybe just one quick follow-up question. Just quarter to date, any color you can provide in terms of what you're seeing to start the quarter?
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Yeah, the -- as you know, we always get it. We always provide some insight. If you look so far, we're consistent with our expectations, and Gary outlined a little bit about what we would expect quarterly -- between quarters to be. If you look at the first period, the first four weeks of the year, it's trending a little bit better than 13th.
+
+But both of those were lower than the fourth quarter actual. And I want to remind you that ESI -- Express Scripts, I should say, is about 1.5%. And then I always hate to talk about weather, but weather was more friendly to us a year ago than it is this year. And I don't ever want to use weather as an excuse, but it is an insight if you look at the current trends.
+
+But the key point is we are trending where we expect it to be.
+
+Rupesh Parikh -- Oppenheimer and Company -- Analyst
+
+OK, great. Thank you.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thanks, Rupesh.
+
+Operator
+
+Thank you. Our next question comes from Spencer Hanus from Wolfe Research. Spencer, your line is now open. Please go ahead.
+
+Spencer Hanus -- Wolfe Research -- Analyst
+
+Good morning. Thanks for taking the question. On owned brands, you saw that outperform the overall comp again this quarter. Are you seeing CPGs get more willing to offer trade spend just given the share losses that they're seeing? And do you think the trade-down that we've seen over the last few quarters accelerates as we move through '23?
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Yeah. If you look at, you know, a five-year trend or a 10-year trend, Our Brands has picked up share on almost every year. And the only exception to that was a little bit of time during COVID where people had much more money in their pockets. If you look -- I would say, you know, all short statements in economics are wrong, but we still have several CPGs that are passed -- are trying to pass through costs more than probably their inflation.
+
+We would still see that they're more focused on profit than tonnage. And when that is true, that's when Our Brands continues to gain share. And that's the reason why Our Brands is performing so strongly. And if you look at historical cycles, eventually, that -- what you outlined will happen, but it hasn't started happening yet.
+
+Spencer Hanus -- Wolfe Research -- Analyst
+
+Got it. That's helpful. And then on fuel margins, you called out $0.51 during the prepared remarks, which is up more than 50% versus what it was in 2019. So, just curious how you're thinking about the sustainability of fuel margins and where those will ultimately rebaseline as it just becomes a bigger part of your overall operating profit today.
+
+Gary Millerchip -- Chief Financial Officer
+
+Yeah, thanks, Spencer. I think as we mentioned in our prepared comments, we do believe that fuel margins will be sustained at a higher level than the historical averages. We think there's been some structural changes in that industry as you look at the last five years that would cause us to think that margins will be maintained at a higher level than historical levels. All that being said, though, we do think, I think I mentioned it in one of the questions earlier, that we would think that fuel profitability somewhere between a $200 million to $250 million headwind in 2023.
+
+Largely not because we don't think that there's a continued sort of sustainability in fuel margins. But if you remember last year when the war in Ukraine was announced, there was some real volatility in prices. And we think some of those shocks that happened around those times generally don't get repeated and cycled. So, it's really allowing some of those sort of one-time unusual spikes in pricing or changes in pricing.
+
+But fundamentally, we believe fuel will be sustained at high levels.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+The other thing, just to add to Gary's point, when retail fuel prices are high, customers engage in our fuel rewards a lot more, and we provide significant discounts to customers through our fuel rewards. If prices come down, usually, our reward costs will go down there as well. So, you have to look at, to me, all the pieces together.
+
+Spencer Hanus -- Wolfe Research -- Analyst
+
+Got it. Fair enough. Thank you.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thanks, Spencer.
+
+Operator
+
+Thank you. Our next question comes from Kate McShane of Goldman Sachs. Your line is now open. Please go ahead.
+
+Leah Jordan -- Goldman Sachs -- Analyst
+
+Hi, this is Leah Jordan. You called outsourcing again as a tailwind this quarter. How are you managing that differently today? How much of an opportunity do you still see there? And is there anything assumed within the cost savings guidance as well?
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+I'll let Gary get into the details. But in sourcing, it's an area where several years ago, we really didn't have a separate department and didn't have professionals that manage that organization. And a couple of leaders and now reports to Gary. They've done a great job of finding talent that understands how to source product, understands the cost of the ingredients and all the pieces.
+
+And it's really turned it into a professional organization. And it's under the leadership of Mike Donnelly and Erin Sharp and a few people that have retired. And now, it's under Gary's leadership. And I just think that team has done a great job of bringing professionalism to the area.
+
+In terms of the specifics, now, I'll let Gary get into the details.
+
+Gary Millerchip -- Chief Financial Officer
+
+Sure. Thanks, Rodney. Thanks for the question, Kate. Yeah, we certainly believe that we -- it's a bit like our overall approach to taking costs out of the business.
+
+We started out saying, how do we make sure we're as efficient as we can be? And then, really, it's become, I think, part of the culture and part of the capability in the organization. And the teams working together, I'd say it's across merchandising, operations, supply chain, and sourcing, all kind of collaborating on how do we design for value. So, whether that be, as Rodney mentioned, continuing to make sure we understand the cost that makes the product and builds the product and gets the product to our stores in a way that we're able to make sure we're being dynamic in negotiating and managing those costs effectively where they change. But it's also about optimizing product design.
+
+It's looking at product end to end and improving, whether it's packaging or product design, and optimizing with customer demand alongside how we can then really match the customer expectations with how we're actually designing the products to really drive the maximum value. And I'd say a bit like the productivity savings, it's one of those things where, every year, we see a road map to additional savings and additional opportunities, and I think that'll continue to be the case based on experience so far.
+
+Leah Jordan -- Goldman Sachs -- Analyst
+
+Great. Thank you. And I have one quick follow-up on SNAP, just given any -- the potential changes there. How did you think about that with your guidance? And also, given you have such a diverse footprint, is there any color you could provide on the stores where states they've already had that extra allotment roll-off?
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+If you look at SNAP, we've assumed that it's a meaningful headwind for the balance of the year. You know, we're hopeful that everybody will work together to continue or find additional money because, as you know, because of inflation, there's a lot of people whose budget is under strain. But we have assumed that that was a meaningful headwind both in the quarter and for the balance of the year. I don't know, Gary, anything you want to add?
+
+Gary Millerchip -- Chief Financial Officer
+
+No, I think it ties to the point about there is still uncertainty, so we're making sure that we -- we're allowing for that in our guidance for the year. I would say, historically, and you probably heard us say this before, that it's actually very difficult to find a correlation between SNAP in the market and spend on food at home because, typically, it tends to impact more discretionary spend. But I think our view was that we've never really had a point in time where we've had so much SNAP dollars in the market. So, we believe most of the models that we've looked at for the last 30 years are kind of difficult to say what they hold true in this environment.
+
+So, we felt it was important to be conservative given that we are in a unique time.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Thanks, Kate.
+
+Operator
+
+Thank you. Our final question for today comes from Kelly Bania from BMO Capital Markets. Kelly, your line is now open. Please go ahead.
+
+Kelly Bania -- BMO Capital Markets -- Analyst
+
+Good morning, Rodney and Gary. Thanks for taking our questions.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Good morning.
+
+Kelly Bania -- BMO Capital Markets -- Analyst
+
+Wanted to ask -- good morning. Wanted to ask just about what your guidance assumes regarding the broader promotional environment. And I guess particularly thinking about the back half when maybe inflation is at a little bit of a lower level, do you expect competition and promotional activity to heat up? This seems to be one of the key investor concerns as we head into next year.
+
+Gary Millerchip -- Chief Financial Officer
+
+Yeah. Thanks for the question, Kelly. I think from our perspective, we feel that we have to be agile, and we're certainly assuming in our guidance that we'll be continuing to invest in value for the customer. I think one of the things that we believe has changed somewhat during the COVID environment is the situation of how the customer shops and engages with you is different.
+
+And what I mean by that is many more customers are engaged digitally, which gives us the ability to truly be able to personalize and bring together all the different pieces. So, it's less about just what you see when you enter the store. It's about the fuel rewards that we can target to that customer. It's the personalized digital coupons.
+
+It's the Our Brands offers that, as Rodney mentioned earlier, can save the customer 10% on an equivalent basket if they decide to shift to some of those products. So, we believe we've learned a lot through the pandemic of how do you really channel those dollars in the most effective way. And that's what gives us the confidence that as we think about the rest of the year, we'll continue to invest in value for the customer, but that we can do that even more effectively than the past to make sure that we stretch those dollars further to deliver value for our customers.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+And one of the things that I think is always important to make sure is a lot -- customers also decide where to shop based on how the fresh -- freshness of product and the friendliness of associates. And that's part of the overall value equation. So, when you look at how we go to market, we have personalized offers, we have promotions, we have fuel rewards, and the customer will engage in those to manage their budget, and then they win by having incredibly fresh product and incredibly friendly associates. And that's how somebody decides where to shop.
+
+So, I really think it's important for you to look at all those together.
+
+Kelly Bania -- BMO Capital Markets -- Analyst
+
+OK, great. And just to follow up on the discussion of units and inflation, I think as we look at this year's comps 5% to 6% range, with inflation, I believe, in the double-digit range. So, maybe it would imply units or tonnage down high single digit. And for next year, 2.5% to 3.5% maybe seems to assume a pretty meaningful acceleration in units.
+
+So, just maybe correct me where I'm wrong on that math or just help us understand what would maybe drive a better unit or tonnage backdrop for Kroger in '23.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+The unit change wouldn't be as much as you said because remember, also, people are switching to Our Brands and other things where the ring per item is less, but we sell more units. So, when you look at overall and if you look overall, we also look at share. And if when you look at units in total, they're declining as well. So, we would expect to continue to make progress in improving our share, and the flow-through of units would come from that.
+
+I don't know, Gary, anything --
+
+Gary Millerchip -- Chief Financial Officer
+
+No [Inaudible] OK.
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Very good. Thanks, Kelly, for the question. With that, obviously, thanks to everyone for all your questions. And as always, before we close, I'd like to share a few comments directly with our associates listening in.
+
+We invite our associates to come to Kroger for a job and discover a career. And I can't think of a better example of this than an associate in our Cincinnati-Dayton division [Inaudible] who came to the United States from Togo. After a few weeks as a bagger, his store manager, Brian, asked him if he'd be interested in leading the dairy department in his store. Because of the dedication, determination, and great job that he's done, [Inaudible] is now the center store specialist, and I can't wait to see what's next for this amazing young man.
+
+I'm inspired every day by the amazing work each of you do and could not be more humbled to be part of this world-class team as we enter the next year. Thank you for making Kroger the incredible place that it is. Thank you, everyone, for joining us. That concludes today's call.
+
+Operator
+
+[Operator signoff]
+
+Duration: 0 minutes
+
+Call participants:
+Rob Quast -- Director, Investor Relations
+
+Rodney McMullen -- Chairman and Chief Executive Officer
+
+Gary Millerchip -- Chief Financial Officer
+
+John Heinbockel -- Guggenheim Partners -- Analyst
+
+Edward Kelly -- Wells Fargo Securities -- Analyst
+
+Simeon Gutman -- Morgan Stanley -- Analyst
+
+Michael Lasser -- UBS -- Analyst
+
+Ken Goldman -- JPMorgan Chase and Company -- Analyst
+
+Rupesh Parikh -- Oppenheimer and Company -- Analyst
+
+Spencer Hanus -- Wolfe Research -- Analyst
+
+Leah Jordan -- Goldman Sachs -- Analyst
+
+Kelly Bania -- BMO Capital Markets -- Analyst

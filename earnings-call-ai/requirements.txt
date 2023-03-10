@@ -1,0 +1,4 @@
+pycob
+pandas
+openai
+gunicorn
