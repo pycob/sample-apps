@@ -1,5 +1,6 @@
 import pycob as cob
 import pandas as pd
+import hashlib
 import openai
 
 app = cob.App("Earnings Call AI")
@@ -15,14 +16,12 @@ def get_transcript(ticker: str) -> str:
 
 def send_to_chatgpt(message_log) -> str:
     response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=message_log, max_tokens=500, stop=None, temperature=0.7)
-
-    # Find the first response from the chatbot that has text in it (some responses may not have text)
-    for choice in response.choices:
+    
+    for choice in response.choices: # Find the first response from the chatbot that has text in it (some responses may not have text)
         if "text" in choice:
             return choice.text
-
-    # If no response with text is found, return the first response's content (which may be empty)
-    return response.choices[0].message.content
+            
+    return response.choices[0].message.content # If no response with text is found, return the first response's content (which may be empty)
 
 def count_tokens(s: str) -> int:
     return len(s) / 4.0
@@ -63,7 +62,17 @@ def summarize_segment(segment: str, user_question: str) -> str:
 def question(server_request: cob.Request) -> cob.Page:
     page = cob.Page("Question")
 
+    previous_questions = server_request.list_objects(table_id="cache")
+
     with page.add_card() as card:
+        card.add_header("Previous Questions")
+        for previous_question in previous_questions:
+            question = previous_question["question"]
+            ticker = previous_question["ticker"]
+            card.add_link(f"{question} ({ticker})", f"/summarize?question={question}&ticker={ticker}")
+
+    with page.add_card() as card:
+        card.add_header("Ask Your Own Question")
         with card.add_form(action="/summarize") as form:
             form.add_formtext("Question", "question", placeholder="What is this company doing to reduce costs?", value="What is this company doing to reduce costs?")
             form.add_formselect("Ticker", "ticker", options=["MDB", "SNOW", "KR"], value="MDB")
@@ -85,17 +94,23 @@ def summarize(server_request: cob.Request) -> cob.Page:
     page.add_header(question, size=3)
     page.add_text(f"{ticker} Earnings Call Transcript")
 
-    segment_summaries = []
+    obj_id = hashlib.md5( (ticker + " " + question).encode() ).hexdigest()
+    summary_cache = server_request.retrieve_dict(table_id="cache", object_id=obj_id)
 
-    for segment in break_up_transcript(ticker):
-        segment_summaries.append({
-            "segment": segment,
-            "summary": summarize_segment(segment, question),
-        })
+    if summary_cache is None:
+        segment_summaries = []
+
+        for segment in break_up_transcript(ticker):
+            segment_summaries.append({
+                "segment": segment,
+                "summary": summarize_segment(segment, question),
+            })
+
+        server_request.store_dict(table_id="cache", object_id=obj_id, value={"question": question, "ticker": ticker, "segment_summaries": segment_summaries})
+    else:
+        segment_summaries = summary_cache["segment_summaries"]
 
     df = pd.DataFrame(segment_summaries)
-
-    # Filter out "summary" that begins with "N/A" or "segment" that is just whitespace
     df = df[ (df["summary"].str.contains("N/A") == False) & (df["segment"].str.isspace() == False)]
 
     page.add_pandastable(df)
